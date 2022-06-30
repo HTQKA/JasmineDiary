@@ -4,6 +4,8 @@ import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.sql.ResultSet;
+
 /**
  * @program: JasmineDiary
  * @ClassName Result
@@ -16,11 +18,59 @@ import lombok.Setter;
 @Getter
 @Setter
 public class Result {
-    private int code;//返回代码
-    private String message;//返回信息
+    private Integer code;
+    private String message;
+    private Object data;
 
-    public Result(int code) {
+    public Result(Integer code) {
         this.code = code;
+    }
+    public Result(Integer code,String message) {
+        this.code = code;
+        this.message = message;
+    }
+    public Result(Integer code, String message, Object data) {
+        this.code = code;
+        this.message = message;
+        this.data = data;
+    }
+
+    public Result() {
+    }
+
+    public static Result success(Object data, String message){
+        Result result = new Result();
+        result.setCode(200);
+        result.setData(data);
+        result.setMessage(message);
+        return result;
+    }
+
+
+    public static Result success(Object data) {
+        return success(data, "");
+    }
+
+    public static Result fail(Integer code,String message){
+        Result result = new Result();
+        result.setCode(code);
+        result.setData(null);
+        result.setMessage(message);
+        return result;
+    }
+
+    public static Result fail(Integer code,String message,Object data){
+        Result result = new Result();
+        result.setCode(code);
+        result.setData(data);
+        result.setMessage(message);
+        return result;
+    }
+
+    public static Result fail(String message){
+        Result result = new Result();
+        result.setMessage(message);
+        return result;
     }
 
 }

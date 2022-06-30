@@ -68,7 +68,8 @@ public class IMessage {
 //    public String toString() {
 //        return IJSON.toJSONString(this);
 //    }
-    
+
+
     public final static String CODE_OK = "ok";
     public final static String CODE_WARN = "warn";
     public final static String CODE_ERROR = "error";

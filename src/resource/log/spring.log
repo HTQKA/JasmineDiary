@@ -1,13 +1,20 @@
-2022-03-16 15:34:47.667  INFO 17088 --- [restartedMain] f.x.j.JasmineDiaryApplication            : Starting JasmineDiaryApplication using Java 1.8.0_241 on XYSFYL with PID 17088 (D:\Users\TheShun\IntelliJIDEAProjects\JasmineDiary\target\classes started by TheShun in D:\Users\TheShun\IntelliJIDEAProjects\JasmineDiary)
-2022-03-16 15:34:47.675  INFO 17088 --- [restartedMain] f.x.j.JasmineDiaryApplication            : No active profile set, falling back to default profiles: default
-2022-03-16 15:34:47.785  INFO 17088 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-03-16 15:34:47.787  INFO 17088 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-03-16 15:34:49.431  INFO 17088 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7979 (http)
-2022-03-16 15:34:49.442  INFO 17088 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-03-16 15:34:49.443  INFO 17088 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
-2022-03-16 15:34:49.562  INFO 17088 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-03-16 15:34:49.562  INFO 17088 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1773 ms
-2022-03-16 15:34:50.009  INFO 17088 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2022-03-16 15:34:50.167  INFO 17088 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-03-16 15:34:50.200  INFO 17088 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7979 (http) with context path ''
-2022-03-16 15:34:50.211  INFO 17088 --- [restartedMain] f.x.j.JasmineDiaryApplication            : Started JasmineDiaryApplication in 3.287 seconds (JVM running for 5.365)
+2022-06-30 09:57:11.639  INFO 20996 --- [restartedMain] f.x.j.JasmineDiaryApplication            : Starting JasmineDiaryApplication using Java 1.8.0_241 on XYSFYL with PID 20996 (D:\Users\TheShun\IntelliJIDEAProjects\JasmineDiary\target\classes started by TheShun in D:\Users\TheShun\IntelliJIDEAProjects\JasmineDiary)
+2022-06-30 09:57:11.654  INFO 20996 --- [restartedMain] f.x.j.JasmineDiaryApplication            : No active profile set, falling back to default profiles: default
+2022-06-30 09:57:11.739  INFO 20996 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-06-30 09:57:11.739  INFO 20996 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-06-30 09:57:13.195  INFO 20996 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7979 (http)
+2022-06-30 09:57:13.211  INFO 20996 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-30 09:57:13.211  INFO 20996 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
+2022-06-30 09:57:13.311  INFO 20996 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-06-30 09:57:13.311  INFO 20996 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1572 ms
+2022-06-30 09:57:13.866  INFO 20996 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2022-06-30 09:57:14.044  INFO 20996 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-06-30 09:57:14.066  INFO 20996 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7979 (http) with context path ''
+2022-06-30 09:57:14.082  INFO 20996 --- [restartedMain] f.x.j.JasmineDiaryApplication            : Started JasmineDiaryApplication in 2.857 seconds (JVM running for 5.167)
+2022-06-30 09:57:20.097  INFO 20996 --- [http-nio-7979-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-30 09:57:20.097  INFO 20996 --- [http-nio-7979-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-06-30 09:57:20.098  INFO 20996 --- [http-nio-7979-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-06-30 09:58:07.226  INFO 20996 --- [http-nio-7979-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-06-30 09:58:08.011  INFO 20996 --- [http-nio-7979-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-06-30 10:54:55.288  INFO 20996 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-06-30 10:54:55.307  INFO 20996 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

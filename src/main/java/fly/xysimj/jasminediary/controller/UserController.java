@@ -43,7 +43,6 @@ public class UserController {
     public Result login(@RequestBody User user) {
         String username = user.getUsername();
         username = HtmlUtils.htmlEscape(username);
-
         User user1 = userService.getUser(username, user.getPassword());
         if (null != user1) {
             return new Result(200);
