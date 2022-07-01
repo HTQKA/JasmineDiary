@@ -32,7 +32,9 @@ public class LogPrintAspect {
     private static final String LINE_SEPARATOR = System.lineSeparator();
 
     private static final Logger log =  LoggerFactory.getLogger(LoggerFactory.class);
-    @Pointcut("@annotation(fly.xysimj.jasminediary.config.annotation.LogPrint)")
+
+    //@Pointcut("@annotation(fly.xysimj.jasminediary.config.annotation.LogPrint)") 注解形式
+    @Pointcut("execution(public * fly.xysimj.jasminediary.controller.*.*(..))")
     public void logPrint(){}
 
     @Before("logPrint()")
@@ -91,7 +93,7 @@ public class LogPrintAspect {
             if (method.getName().equals(methodName)) {
                 Class[] clazzs = method.getParameterTypes();
                 if (clazzs.length == arguments.length) {
-                    description.append(method.getAnnotation(LogPrint.class).description());
+                    //description.append(method.getAnnotation(LogPrint.class).description());
                     break;
                 }
             }

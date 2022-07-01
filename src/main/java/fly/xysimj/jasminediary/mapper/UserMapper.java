@@ -6,6 +6,9 @@ import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 
 import java.util.ArrayList;
+/**
+ * @author TheShun
+ */
 @Mapper
 public interface UserMapper {
     @Select("select * from user")
