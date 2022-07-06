@@ -13,7 +13,7 @@ import java.util.ArrayList;
 * @Entity generator.domain.Role
 */
 @Mapper
-public interface RoleMapper {
+public interface RoleMapper  extends BaseMapper<Role,String>{
     @Select("select * from role ")
     ArrayList<Role> getAllRoles();
 

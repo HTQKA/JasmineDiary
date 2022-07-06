@@ -1,9 +1,12 @@
 package fly.xysimj.jasminediary.error;
 
 import fly.xysimj.jasminediary.entity.Result;
+import org.springframework.web.HttpRequestMethodNotSupportedException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
+
+import java.sql.ResultSet;
 
 /**
  * @program: JasmineDiary
@@ -30,6 +33,13 @@ public class GlobalExceptionHandler {
     public Result error(ArithmeticException e) {
         e.printStackTrace();
         return Result.fail(400,"请求错误",e.getMessage());
+    }
+
+    @ExceptionHandler(HttpRequestMethodNotSupportedException.class)
+    @ResponseBody
+    public Result error(HttpRequestMethodNotSupportedException e){
+        e.printStackTrace();
+        return Result.fail(400,"你访问的界面不存在",e.getMessage());
     }
 
 }

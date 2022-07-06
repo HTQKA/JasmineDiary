@@ -1,6 +1,7 @@
 package fly.xysimj.jasminediary.entity;
 
 import lombok.Data;
+import lombok.Getter;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -10,7 +11,8 @@ import java.util.Date;
  * @TableName xys_sys_role
  */
 @Data
-public class Role implements Serializable {
+@Getter
+public class Role extends BaseEntity implements Serializable {
     /**
      * 主键
      */
@@ -61,7 +63,7 @@ public class Role implements Serializable {
      */
     private String xys3;
 
-    private static final long serialVersionUID = 1L;
+
 
     @Override
     public boolean equals(Object that) {
@@ -120,7 +122,7 @@ public class Role implements Serializable {
         sb.append(", xys1=").append(xys1);
         sb.append(", xys2=").append(xys2);
         sb.append(", xys3=").append(xys3);
-        sb.append(", serialVersionUID=").append(serialVersionUID);
+       // sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");
         return sb.toString();
     }

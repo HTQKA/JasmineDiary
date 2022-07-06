@@ -36,7 +36,7 @@ public class AuthorController {
         if(i > 0){
             return Result.success("","新增成功");
         }
-        return Result.fail("新增失败");
+        return Result.fail(400,"新增失败","权限名称已存在");
     }
     //修改权限
 

@@ -7,6 +7,7 @@ import java.util.Date;
 
 /**
  *
+ * @author TheShun
  * @TableName xys_sys_auth
  */
 @Data

@@ -4,6 +4,7 @@ import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.io.Serializable;
 import java.sql.ResultSet;
 
 /**
@@ -17,7 +18,9 @@ import java.sql.ResultSet;
 @Data
 @Getter
 @Setter
-public class Result {
+public class Result implements Serializable {
+    //uuid,用作唯一标识符，供序列化和反序列化时检测是否一致
+    private static final long serialVersionUID = 7498483649536881777L;
     private Integer code;
     private String message;
     private Object data;

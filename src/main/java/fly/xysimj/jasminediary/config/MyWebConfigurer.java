@@ -21,6 +21,7 @@ public class MyWebConfigurer implements WebMvcConfigurer {
     public LoginInterceptor getLoginInterceptor() {
         return new LoginInterceptor();
     }
+
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         //拦截所有路径,除了/index.html
