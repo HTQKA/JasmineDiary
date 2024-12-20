@@ -22,25 +22,37 @@ public class BaseEntity implements Serializable {
      * 创建时间
      */
     @ApiModelProperty(value = "创建时间", hidden = true)
-    private Date createdDt;
+    private Date createDate;
 
     /**
      * 创建者
      */
     @ApiModelProperty(value = "创建者", hidden = true)
-    private String createdBy;
+    private String createBy;
+
+    /**
+     * 创建者
+     */
+    @ApiModelProperty(value = "创建者", hidden = true)
+    private String createById;
 
     /**
      * 更新时间
      */
     @ApiModelProperty(value = "更新时间", hidden = true)
-    private Date updatedDt;
+    private Date lastUpdateDate;
 
     /**
      * 更新者
      */
     @ApiModelProperty(value = "更新者", hidden = true)
-    private String updatedBy;
+    private String lastUpdateBy;
+
+    /**
+     * 更新者
+     */
+    @ApiModelProperty(value = "更新者ID", hidden = true)
+    private String lastUpdateById;
 
     private static final long serialVersionUID = 1L;
 }

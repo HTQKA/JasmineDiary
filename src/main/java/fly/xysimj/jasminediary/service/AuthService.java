@@ -39,8 +39,8 @@ public class AuthService {
         Auth byAction = authMapper.getByAction(auth);
         if(byAction ==null){
             auth.setId(IUtils.getUUID());
-            auth.setLmTime(IDate.getTimestamp());
-            auth.setLmUser("XYS");
+            auth.setLastUpdateDate(IDate.getTimestamp());
+            auth.setLastUpdateBy("XYS");
             auth.setStatus("Y");
             int i = authMapper.saveAuth(auth);
             return i;

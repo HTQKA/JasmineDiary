@@ -2,6 +2,8 @@ package fly.xysimj.jasminediary.entity;
 
 import lombok.Data;
 
+import java.util.Date;
+
 /**
  * @program: JasmineDiary
  * @ClassName User
@@ -15,4 +17,13 @@ public class User {
     private Integer id;
     private String username;
     private String password;
+    private String email;
+    private String phone;
+    private Date createTime;
+    private Date updateTime;
+    private Integer status;
+    private Date lastLogin;
+    private String lastLoginIp;
+    private String lastLoginAddress;
+    private String loginNum;
 }

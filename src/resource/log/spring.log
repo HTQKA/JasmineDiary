@@ -1,15 +1,310 @@
-2022-07-07 09:09:03.496  INFO 22736 --- [restartedMain] f.x.j.JasmineDiaryApplication            : Starting JasmineDiaryApplication using Java 1.8.0_241 on XYSFYL with PID 22736 (D:\Users\TheShun\IntelliJIDEAProjects\JasmineDiary\target\classes started by TheShun in D:\Users\TheShun\IntelliJIDEAProjects\JasmineDiary)
-2022-07-07 09:09:03.500  INFO 22736 --- [restartedMain] f.x.j.JasmineDiaryApplication            : No active profile set, falling back to default profiles: default
-2022-07-07 09:09:03.568  INFO 22736 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-07-07 09:09:03.568  INFO 22736 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-07-07 09:09:04.353  INFO 22736 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2022-07-07 09:09:04.356  INFO 22736 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2022-07-07 09:09:04.392  INFO 22736 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 0 Redis repository interfaces.
-2022-07-07 09:09:05.111  INFO 22736 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7979 (http)
-2022-07-07 09:09:05.119  INFO 22736 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-07-07 09:09:05.120  INFO 22736 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
-2022-07-07 09:09:05.236  INFO 22736 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-07-07 09:09:05.236  INFO 22736 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1667 ms
-2022-07-07 09:09:06.458  INFO 22736 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-07-07 09:09:06.492  INFO 22736 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7979 (http) with context path ''
-2022-07-07 09:09:06.502  INFO 22736 --- [restartedMain] f.x.j.JasmineDiaryApplication            : Started JasmineDiaryApplication in 3.46 seconds (JVM running for 5.005)
+2024-12-20 17:08:53.991  INFO 35403 --- [restartedMain] f.x.j.JasmineDiaryApplication            : Starting JasmineDiaryApplication using Java 17.0.12 on xysimjdeMacBook-Pro.local with PID 35403 (/Users/xysimj/IdeaProjects/JasmineDiary/target/classes started by xysimj in /Users/xysimj/IdeaProjects/JasmineDiary)
+2024-12-20 17:08:53.992  INFO 35403 --- [restartedMain] f.x.j.JasmineDiaryApplication            : No active profile set, falling back to default profiles: default
+2024-12-20 17:08:54.010  INFO 35403 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-12-20 17:08:54.011  INFO 35403 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-12-20 17:08:54.244  INFO 35403 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2024-12-20 17:08:54.246  INFO 35403 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-12-20 17:08:54.257  INFO 35403 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 Redis repository interfaces.
+2024-12-20 17:08:54.599  INFO 35403 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7979 (http)
+2024-12-20 17:08:54.603  INFO 35403 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-20 17:08:54.603  INFO 35403 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
+2024-12-20 17:08:54.625  INFO 35403 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-20 17:08:54.625  INFO 35403 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 614 ms
+2024-12-20 17:08:55.120  INFO 35403 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-12-20 17:08:55.138  INFO 35403 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7979 (http) with context path ''
+2024-12-20 17:08:55.143  INFO 35403 --- [restartedMain] f.x.j.JasmineDiaryApplication            : Started JasmineDiaryApplication in 1.288 seconds (JVM running for 2.482)
+2024-12-20 17:09:55.356  INFO 35403 --- [restartedMain] f.x.j.JasmineDiaryApplication            : Starting JasmineDiaryApplication using Java 17.0.12 on xysimjdeMacBook-Pro.local with PID 35403 (/Users/xysimj/IdeaProjects/JasmineDiary/target/classes started by xysimj in /Users/xysimj/IdeaProjects/JasmineDiary)
+2024-12-20 17:09:55.356  INFO 35403 --- [restartedMain] f.x.j.JasmineDiaryApplication            : No active profile set, falling back to default profiles: default
+2024-12-20 17:09:55.470  INFO 35403 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2024-12-20 17:09:55.470  INFO 35403 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-12-20 17:09:55.470  INFO 35403 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 0 ms. Found 0 Redis repository interfaces.
+2024-12-20 17:09:55.482  WARN 35403 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[fly.xysimj.jasminediary.mapper]' package. Please check your configuration.
+2024-12-20 17:09:55.534  INFO 35403 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7979 (http)
+2024-12-20 17:09:55.535  INFO 35403 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-20 17:09:55.535  INFO 35403 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
+2024-12-20 17:09:55.547  INFO 35403 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-20 17:09:55.547  INFO 35403 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 187 ms
+2024-12-20 17:09:55.648  INFO 35403 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2024-12-20 17:09:55.758  INFO 35403 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-12-20 17:09:55.765  INFO 35403 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7979 (http) with context path ''
+2024-12-20 17:09:55.767  INFO 35403 --- [restartedMain] f.x.j.JasmineDiaryApplication            : Started JasmineDiaryApplication in 0.436 seconds (JVM running for 63.106)
+2024-12-20 17:09:55.770  INFO 35403 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation delta:
+
+
+==========================
+CONDITION EVALUATION DELTA
+==========================
+
+
+Positive matches:
+-----------------
+
+   WebMvcAutoConfiguration matched:
+      - @ConditionalOnClass found required classes 'javax.servlet.Servlet', 'org.springframework.web.servlet.DispatcherServlet', 'org.springframework.web.servlet.config.annotation.WebMvcConfigurer' (OnClassCondition)
+      - found 'session' scope (OnWebApplicationCondition)
+      - @ConditionalOnMissingBean (types: org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebMvcAutoConfiguration#formContentFilter matched:
+      - @ConditionalOnProperty (spring.mvc.formcontent.filter.enabled) matched (OnPropertyCondition)
+      - @ConditionalOnMissingBean (types: org.springframework.web.filter.FormContentFilter; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebMvcAutoConfiguration.EnableWebMvcConfiguration#flashMapManager matched:
+      - @ConditionalOnMissingBean (names: flashMapManager; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebMvcAutoConfiguration.EnableWebMvcConfiguration#localeResolver matched:
+      - @ConditionalOnMissingBean (names: localeResolver; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebMvcAutoConfiguration.EnableWebMvcConfiguration#themeResolver matched:
+      - @ConditionalOnMissingBean (names: themeResolver; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter#defaultViewResolver matched:
+      - @ConditionalOnMissingBean (types: org.springframework.web.servlet.view.InternalResourceViewResolver; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter#requestContextFilter matched:
+      - @ConditionalOnMissingBean (types: org.springframework.web.context.request.RequestContextListener,org.springframework.web.filter.RequestContextFilter; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter#viewResolver matched:
+      - @ConditionalOnBean (types: org.springframework.web.servlet.ViewResolver; SearchStrategy: all) found beans 'defaultViewResolver', 'beanNameViewResolver', 'mvcViewResolver'; @ConditionalOnMissingBean (names: viewResolver types: org.springframework.web.servlet.view.ContentNegotiatingViewResolver; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+
+Negative matches:
+-----------------
+
+   WebMvcAutoConfiguration#hiddenHttpMethodFilter:
+      Did not match:
+         - @ConditionalOnProperty (spring.mvc.hiddenmethod.filter.enabled) did not find property 'enabled' (OnPropertyCondition)
+
+   WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter#beanNameViewResolver:
+      Did not match:
+         - @ConditionalOnMissingBean (types: org.springframework.web.servlet.view.BeanNameViewResolver; SearchStrategy: all) found beans of type 'org.springframework.web.servlet.view.BeanNameViewResolver' beanNameViewResolver (OnBeanCondition)
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    None
+
+
+
+2024-12-20 17:09:57.607  INFO 35403 --- [restartedMain] f.x.j.JasmineDiaryApplication            : Starting JasmineDiaryApplication using Java 17.0.12 on xysimjdeMacBook-Pro.local with PID 35403 (/Users/xysimj/IdeaProjects/JasmineDiary/target/classes started by xysimj in /Users/xysimj/IdeaProjects/JasmineDiary)
+2024-12-20 17:09:57.607  INFO 35403 --- [restartedMain] f.x.j.JasmineDiaryApplication            : No active profile set, falling back to default profiles: default
+2024-12-20 17:09:57.656  INFO 35403 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2024-12-20 17:09:57.656  INFO 35403 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-12-20 17:09:57.659  INFO 35403 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 0 Redis repository interfaces.
+2024-12-20 17:09:57.708  INFO 35403 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7979 (http)
+2024-12-20 17:09:57.708  INFO 35403 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-20 17:09:57.708  INFO 35403 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
+2024-12-20 17:09:57.712  INFO 35403 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-20 17:09:57.712  INFO 35403 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 104 ms
+2024-12-20 17:09:57.919  INFO 35403 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-12-20 17:09:57.925  INFO 35403 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7979 (http) with context path ''
+2024-12-20 17:09:57.927  INFO 35403 --- [restartedMain] f.x.j.JasmineDiaryApplication            : Started JasmineDiaryApplication in 0.327 seconds (JVM running for 65.266)
+2024-12-20 17:09:57.927  INFO 35403 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation delta:
+
+
+==========================
+CONDITION EVALUATION DELTA
+==========================
+
+
+Positive matches:
+-----------------
+
+    None
+
+
+Negative matches:
+-----------------
+
+   WebMvcAutoConfiguration:
+      Did not match:
+         - @ConditionalOnMissingBean (types: org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport; SearchStrategy: all) found beans of type 'org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport' webMvcConfigurer (OnBeanCondition)
+      Matched:
+         - @ConditionalOnClass found required classes 'javax.servlet.Servlet', 'org.springframework.web.servlet.DispatcherServlet', 'org.springframework.web.servlet.config.annotation.WebMvcConfigurer' (OnClassCondition)
+         - found 'session' scope (OnWebApplicationCondition)
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    None
+
+
+
+2024-12-20 17:12:24.455  INFO 35403 --- [http-nio-7979-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-20 17:12:24.455  INFO 35403 --- [http-nio-7979-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-20 17:12:24.457  INFO 35403 --- [http-nio-7979-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-12-20 17:19:26.990  INFO 35403 --- [restartedMain] f.x.j.JasmineDiaryApplication            : Starting JasmineDiaryApplication using Java 17.0.12 on xysimjdeMacBook-Pro.local with PID 35403 (/Users/xysimj/IdeaProjects/JasmineDiary/target/classes started by xysimj in /Users/xysimj/IdeaProjects/JasmineDiary)
+2024-12-20 17:19:26.990  INFO 35403 --- [restartedMain] f.x.j.JasmineDiaryApplication            : No active profile set, falling back to default profiles: default
+2024-12-20 17:19:27.067  INFO 35403 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2024-12-20 17:19:27.067  INFO 35403 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-12-20 17:19:27.071  INFO 35403 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+2024-12-20 17:19:27.126  INFO 35403 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7979 (http)
+2024-12-20 17:19:27.126  INFO 35403 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-20 17:19:27.126  INFO 35403 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
+2024-12-20 17:19:27.130  INFO 35403 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-20 17:19:27.130  INFO 35403 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 139 ms
+2024-12-20 17:19:27.366  INFO 35403 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-12-20 17:19:27.373  INFO 35403 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7979 (http) with context path ''
+2024-12-20 17:19:27.374  INFO 35403 --- [restartedMain] f.x.j.JasmineDiaryApplication            : Started JasmineDiaryApplication in 0.62 seconds (JVM running for 634.719)
+2024-12-20 17:19:27.375  INFO 35403 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-12-20 17:20:17.304  INFO 35403 --- [restartedMain] f.x.j.JasmineDiaryApplication            : Starting JasmineDiaryApplication using Java 17.0.12 on xysimjdeMacBook-Pro.local with PID 35403 (/Users/xysimj/IdeaProjects/JasmineDiary/target/classes started by xysimj in /Users/xysimj/IdeaProjects/JasmineDiary)
+2024-12-20 17:20:17.305  INFO 35403 --- [restartedMain] f.x.j.JasmineDiaryApplication            : No active profile set, falling back to default profiles: default
+2024-12-20 17:20:17.360  INFO 35403 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2024-12-20 17:20:17.360  INFO 35403 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-12-20 17:20:17.363  INFO 35403 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+2024-12-20 17:20:17.424  INFO 35403 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7979 (http)
+2024-12-20 17:20:17.424  INFO 35403 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-20 17:20:17.424  INFO 35403 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
+2024-12-20 17:20:17.428  INFO 35403 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-20 17:20:17.428  INFO 35403 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 122 ms
+2024-12-20 17:20:17.646  INFO 35403 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-12-20 17:20:17.653  INFO 35403 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7979 (http) with context path ''
+2024-12-20 17:20:17.654  INFO 35403 --- [restartedMain] f.x.j.JasmineDiaryApplication            : Started JasmineDiaryApplication in 0.359 seconds (JVM running for 684.999)
+2024-12-20 17:20:17.655  INFO 35403 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-12-20 17:21:02.525  INFO 35403 --- [restartedMain] f.x.j.JasmineDiaryApplication            : Starting JasmineDiaryApplication using Java 17.0.12 on xysimjdeMacBook-Pro.local with PID 35403 (/Users/xysimj/IdeaProjects/JasmineDiary/target/classes started by xysimj in /Users/xysimj/IdeaProjects/JasmineDiary)
+2024-12-20 17:21:02.526  INFO 35403 --- [restartedMain] f.x.j.JasmineDiaryApplication            : No active profile set, falling back to default profiles: default
+2024-12-20 17:21:02.585  INFO 35403 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2024-12-20 17:21:02.585  INFO 35403 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-12-20 17:21:02.588  INFO 35403 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+2024-12-20 17:21:02.640  INFO 35403 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7979 (http)
+2024-12-20 17:21:02.640  INFO 35403 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-20 17:21:02.640  INFO 35403 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
+2024-12-20 17:21:02.643  INFO 35403 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-20 17:21:02.644  INFO 35403 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 118 ms
+2024-12-20 17:21:02.847  INFO 35403 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-12-20 17:21:02.852  INFO 35403 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7979 (http) with context path ''
+2024-12-20 17:21:02.854  INFO 35403 --- [restartedMain] f.x.j.JasmineDiaryApplication            : Started JasmineDiaryApplication in 0.339 seconds (JVM running for 730.199)
+2024-12-20 17:21:02.855  INFO 35403 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-12-20 17:22:02.418  INFO 35403 --- [restartedMain] f.x.j.JasmineDiaryApplication            : Starting JasmineDiaryApplication using Java 17.0.12 on xysimjdeMacBook-Pro.local with PID 35403 (/Users/xysimj/IdeaProjects/JasmineDiary/target/classes started by xysimj in /Users/xysimj/IdeaProjects/JasmineDiary)
+2024-12-20 17:22:02.419  INFO 35403 --- [restartedMain] f.x.j.JasmineDiaryApplication            : No active profile set, falling back to default profiles: default
+2024-12-20 17:22:02.483  INFO 35403 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2024-12-20 17:22:02.483  INFO 35403 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-12-20 17:22:02.486  INFO 35403 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 0 Redis repository interfaces.
+2024-12-20 17:22:02.536  INFO 35403 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7979 (http)
+2024-12-20 17:22:02.536  INFO 35403 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-20 17:22:02.536  INFO 35403 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
+2024-12-20 17:22:02.540  INFO 35403 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-20 17:22:02.540  INFO 35403 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 119 ms
+2024-12-20 17:22:02.749  INFO 35403 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-12-20 17:22:02.755  INFO 35403 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7979 (http) with context path ''
+2024-12-20 17:22:02.757  INFO 35403 --- [restartedMain] f.x.j.JasmineDiaryApplication            : Started JasmineDiaryApplication in 0.565 seconds (JVM running for 790.102)
+2024-12-20 17:22:02.758  INFO 35403 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-12-20 17:24:26.184  INFO 35403 --- [restartedMain] f.x.j.JasmineDiaryApplication            : Starting JasmineDiaryApplication using Java 17.0.12 on xysimjdeMacBook-Pro.local with PID 35403 (/Users/xysimj/IdeaProjects/JasmineDiary/target/classes started by xysimj in /Users/xysimj/IdeaProjects/JasmineDiary)
+2024-12-20 17:24:26.184  INFO 35403 --- [restartedMain] f.x.j.JasmineDiaryApplication            : No active profile set, falling back to default profiles: default
+2024-12-20 17:24:26.240  INFO 35403 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2024-12-20 17:24:26.240  INFO 35403 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-12-20 17:24:26.244  INFO 35403 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+2024-12-20 17:24:26.295  INFO 35403 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7979 (http)
+2024-12-20 17:24:26.296  INFO 35403 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-20 17:24:26.296  INFO 35403 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
+2024-12-20 17:24:26.299  INFO 35403 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-20 17:24:26.299  INFO 35403 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 114 ms
+2024-12-20 17:24:26.507  INFO 35403 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-12-20 17:24:26.512  INFO 35403 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7979 (http) with context path ''
+2024-12-20 17:24:26.514  INFO 35403 --- [restartedMain] f.x.j.JasmineDiaryApplication            : Started JasmineDiaryApplication in 0.546 seconds (JVM running for 933.858)
+2024-12-20 17:24:26.515  INFO 35403 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-12-20 17:27:31.894  INFO 35403 --- [restartedMain] f.x.j.JasmineDiaryApplication            : Starting JasmineDiaryApplication using Java 17.0.12 on xysimjdeMacBook-Pro.local with PID 35403 (/Users/xysimj/IdeaProjects/JasmineDiary/target/classes started by xysimj in /Users/xysimj/IdeaProjects/JasmineDiary)
+2024-12-20 17:27:31.894  INFO 35403 --- [restartedMain] f.x.j.JasmineDiaryApplication            : No active profile set, falling back to default profiles: default
+2024-12-20 17:27:31.948  INFO 35403 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2024-12-20 17:27:31.948  INFO 35403 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-12-20 17:27:31.951  INFO 35403 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 0 Redis repository interfaces.
+2024-12-20 17:27:32.001  INFO 35403 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7979 (http)
+2024-12-20 17:27:32.002  INFO 35403 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-20 17:27:32.002  INFO 35403 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
+2024-12-20 17:27:32.006  INFO 35403 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-20 17:27:32.006  INFO 35403 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 111 ms
+2024-12-20 17:27:32.018  WARN 35403 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'authorController' defined in file [/Users/xysimj/IdeaProjects/JasmineDiary/target/classes/fly/xysimj/jasminediary/controller/AuthorController.class]: Post-processing of merged bean definition failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [fly.xysimj.jasminediary.controller.AuthorController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@7cee8f33]
+2024-12-20 17:27:32.018  INFO 35403 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-12-20 17:27:32.021  INFO 35403 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2024-12-20 17:27:32.030 ERROR 35403 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'authorController' defined in file [/Users/xysimj/IdeaProjects/JasmineDiary/target/classes/fly/xysimj/jasminediary/controller/AuthorController.class]: Post-processing of merged bean definition failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [fly.xysimj.jasminediary.controller.AuthorController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@7cee8f33]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:597) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.6.1.jar:2.6.1]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730) ~[spring-boot-2.6.1.jar:2.6.1]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:412) ~[spring-boot-2.6.1.jar:2.6.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302) ~[spring-boot-2.6.1.jar:2.6.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301) ~[spring-boot-2.6.1.jar:2.6.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1290) ~[spring-boot-2.6.1.jar:2.6.1]
+	at fly.xysimj.jasminediary.JasmineDiaryApplication.main(JasmineDiaryApplication.java:12) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.6.1.jar:2.6.1]
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [fly.xysimj.jasminediary.controller.AuthorController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@7cee8f33]
+	at org.springframework.util.ReflectionUtils.getDeclaredFields(ReflectionUtils.java:739) ~[spring-core-5.3.13.jar:5.3.13]
+	at org.springframework.util.ReflectionUtils.doWithLocalFields(ReflectionUtils.java:671) ~[spring-core-5.3.13.jar:5.3.13]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.buildResourceMetadata(CommonAnnotationBeanPostProcessor.java:377) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.findResourceMetadata(CommonAnnotationBeanPostProcessor.java:358) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessMergedBeanDefinition(CommonAnnotationBeanPostProcessor.java:306) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyMergedBeanDefinitionPostProcessors(AbstractAutowireCapableBeanFactory.java:1116) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594) ~[spring-beans-5.3.13.jar:5.3.13]
+	... 20 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: fly/xysimj/jasminediary/service/AuthService
+	at java.base/java.lang.Class.getDeclaredFields0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.privateGetDeclaredFields(Class.java:3297) ~[na:na]
+	at java.base/java.lang.Class.getDeclaredFields(Class.java:2371) ~[na:na]
+	at org.springframework.util.ReflectionUtils.getDeclaredFields(ReflectionUtils.java:734) ~[spring-core-5.3.13.jar:5.3.13]
+	... 26 common frames omitted
+Caused by: java.lang.ClassNotFoundException: fly.xysimj.jasminediary.service.AuthService
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525) ~[na:na]
+	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:467) ~[na:na]
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:145) ~[spring-boot-devtools-2.6.1.jar:2.6.1]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525) ~[na:na]
+	... 30 common frames omitted
+
+2024-12-20 17:28:01.738  INFO 35403 --- [restartedMain] f.x.j.JasmineDiaryApplication            : Starting JasmineDiaryApplication using Java 17.0.12 on xysimjdeMacBook-Pro.local with PID 35403 (/Users/xysimj/IdeaProjects/JasmineDiary/target/classes started by xysimj in /Users/xysimj/IdeaProjects/JasmineDiary)
+2024-12-20 17:28:01.739  INFO 35403 --- [restartedMain] f.x.j.JasmineDiaryApplication            : No active profile set, falling back to default profiles: default
+2024-12-20 17:28:01.809  INFO 35403 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2024-12-20 17:28:01.809  INFO 35403 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-12-20 17:28:01.814  INFO 35403 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 Redis repository interfaces.
+2024-12-20 17:28:01.880  INFO 35403 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7979 (http)
+2024-12-20 17:28:01.880  INFO 35403 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-20 17:28:01.880  INFO 35403 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
+2024-12-20 17:28:01.884  INFO 35403 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2024-12-20 17:28:01.884  INFO 35403 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 144 ms
+2024-12-20 17:28:02.100  INFO 35403 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-12-20 17:28:02.106  INFO 35403 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7979 (http) with context path ''
+2024-12-20 17:28:02.108  INFO 35403 --- [restartedMain] f.x.j.JasmineDiaryApplication            : Started JasmineDiaryApplication in 0.384 seconds (JVM running for 1149.433)
+2024-12-20 17:28:02.109  INFO 35403 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-12-20 17:28:03.544  INFO 35403 --- [restartedMain] f.x.j.JasmineDiaryApplication            : Starting JasmineDiaryApplication using Java 17.0.12 on xysimjdeMacBook-Pro.local with PID 35403 (/Users/xysimj/IdeaProjects/JasmineDiary/target/classes started by xysimj in /Users/xysimj/IdeaProjects/JasmineDiary)
+2024-12-20 17:28:03.544  INFO 35403 --- [restartedMain] f.x.j.JasmineDiaryApplication            : No active profile set, falling back to default profiles: default
+2024-12-20 17:28:03.594  INFO 35403 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2024-12-20 17:28:03.594  INFO 35403 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-12-20 17:28:03.596  INFO 35403 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 0 Redis repository interfaces.
+2024-12-20 17:28:03.644  INFO 35403 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7979 (http)
+2024-12-20 17:28:03.644  INFO 35403 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-20 17:28:03.644  INFO 35403 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
+2024-12-20 17:28:03.647  INFO 35403 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2024-12-20 17:28:03.647  INFO 35403 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 102 ms
+2024-12-20 17:28:03.847  INFO 35403 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-12-20 17:28:03.853  INFO 35403 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7979 (http) with context path ''
+2024-12-20 17:28:03.855  INFO 35403 --- [restartedMain] f.x.j.JasmineDiaryApplication            : Started JasmineDiaryApplication in 0.317 seconds (JVM running for 1151.179)
+2024-12-20 17:28:03.855  INFO 35403 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
