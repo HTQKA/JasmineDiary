@@ -8,7 +8,7 @@
     </select>
 
 
-    <!--    <insert id="insertEmp">-->
-    <!--        INSERT INTO employee(lastName,email,gender,d_id) VALUES (#{lastName},#{email},#{gender},#{dId})-->
-    <!--    </insert>-->
+        <insert id="insert">
+            INSERT INTO user(id,username,password) VALUES (#{id},#{username},#{password})
+        </insert>
 </mapper>

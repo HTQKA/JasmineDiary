@@ -6,6 +6,8 @@ import fly.xysimj.jasminediary.mapper.UserMapper;
 import fly.xysimj.jasminediary.service.UserService;
 import fly.xysimj.jasminediary.utils.JsonUtils;
 import io.lettuce.core.protocol.CommandType;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.redis.core.StringRedisTemplate;
@@ -35,6 +37,7 @@ import java.util.UUID;
 @CrossOrigin
 @RequestMapping("/fyl/user")
 public class UserController {
+    private static final Logger log = LoggerFactory.getLogger(UserController.class);
     @Autowired
     UserMapper userMapper;
     @Autowired
@@ -61,27 +64,27 @@ public class UserController {
     public Result index(){
         return null;
     }
+
     @PostMapping("/addUser")
-    public Result addUser(){
-        return  null;
+    public Result addUser(@RequestBody User user,HttpSession session,HttpServletRequest request){
+        return  userService.addUser(user);
     }
     @PostMapping("/updateUser")
-    public Result updateUser(){
+    public Result updateUser(@RequestBody User user,HttpSession session,HttpServletRequest request){
+        //校验用户是否是否登录
+        userService.updateUser(user);
         return null;
     }
+
+
     @PostMapping("/deleteUser")
-    public Result deleteUsr(){
-        return null;
+    public Result deleteUsr(@RequestBody User user,HttpSession session,HttpServletRequest request){
+        log.info("注销账号");
+        return userService.deleteUser(user);
     }
     @GetMapping("/getAllUsers")
-    public ArrayList<User> getAllUsers() {
-        return userMapper.getAllUsers();
+    public Result getAllUsers() {
+        return Result.success(userMapper.getAllUsers());
     }
-
-    @GetMapping("/getAllUser")
-    public ArrayList<User> getAllUser() {
-        return userMapper.getAllUsers();
-    }
-
 
 }

@@ -1,5 +1,6 @@
 package fly.xysimj.jasminediary.mapper;
 
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import fly.xysimj.jasminediary.entity.User;
 import fly.xysimj.jasminediary.mapper.sql.UserSqlProvider;
 import org.apache.ibatis.annotations.*;
@@ -9,7 +10,7 @@ import java.util.ArrayList;
  * @author TheShun
  */
 @Mapper
-public interface UserMapper{
+public interface UserMapper extends BaseMapper<User> {
     @Select("select * from user")
     ArrayList<User> getAllUsers();
 
@@ -21,8 +22,4 @@ public interface UserMapper{
     @SelectProvider(method = "getUserById",type = UserSqlProvider.class)
    // @ResultMap(value = "user")
     User getUserById(@Param("id") Integer id);
-
-
-
-
 }

@@ -1,240 +1,479 @@
-2024-12-20 17:08:53.991  INFO 35403 --- [restartedMain] f.x.j.JasmineDiaryApplication            : Starting JasmineDiaryApplication using Java 17.0.12 on xysimjdeMacBook-Pro.local with PID 35403 (/Users/xysimj/IdeaProjects/JasmineDiary/target/classes started by xysimj in /Users/xysimj/IdeaProjects/JasmineDiary)
-2024-12-20 17:08:53.992  INFO 35403 --- [restartedMain] f.x.j.JasmineDiaryApplication            : No active profile set, falling back to default profiles: default
-2024-12-20 17:08:54.010  INFO 35403 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2024-12-20 17:08:54.011  INFO 35403 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2024-12-20 17:08:54.244  INFO 35403 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2024-12-20 17:08:54.246  INFO 35403 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2024-12-20 17:08:54.257  INFO 35403 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 Redis repository interfaces.
-2024-12-20 17:08:54.599  INFO 35403 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7979 (http)
-2024-12-20 17:08:54.603  INFO 35403 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-12-20 17:08:54.603  INFO 35403 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
-2024-12-20 17:08:54.625  INFO 35403 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-12-20 17:08:54.625  INFO 35403 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 614 ms
-2024-12-20 17:08:55.120  INFO 35403 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2024-12-20 17:08:55.138  INFO 35403 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7979 (http) with context path ''
-2024-12-20 17:08:55.143  INFO 35403 --- [restartedMain] f.x.j.JasmineDiaryApplication            : Started JasmineDiaryApplication in 1.288 seconds (JVM running for 2.482)
-2024-12-20 17:09:55.356  INFO 35403 --- [restartedMain] f.x.j.JasmineDiaryApplication            : Starting JasmineDiaryApplication using Java 17.0.12 on xysimjdeMacBook-Pro.local with PID 35403 (/Users/xysimj/IdeaProjects/JasmineDiary/target/classes started by xysimj in /Users/xysimj/IdeaProjects/JasmineDiary)
-2024-12-20 17:09:55.356  INFO 35403 --- [restartedMain] f.x.j.JasmineDiaryApplication            : No active profile set, falling back to default profiles: default
-2024-12-20 17:09:55.470  INFO 35403 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2024-12-20 17:09:55.470  INFO 35403 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2024-12-20 17:09:55.470  INFO 35403 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 0 ms. Found 0 Redis repository interfaces.
-2024-12-20 17:09:55.482  WARN 35403 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[fly.xysimj.jasminediary.mapper]' package. Please check your configuration.
-2024-12-20 17:09:55.534  INFO 35403 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7979 (http)
-2024-12-20 17:09:55.535  INFO 35403 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-12-20 17:09:55.535  INFO 35403 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
-2024-12-20 17:09:55.547  INFO 35403 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-12-20 17:09:55.547  INFO 35403 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 187 ms
-2024-12-20 17:09:55.648  INFO 35403 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2024-12-20 17:09:55.758  INFO 35403 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2024-12-20 17:09:55.765  INFO 35403 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7979 (http) with context path ''
-2024-12-20 17:09:55.767  INFO 35403 --- [restartedMain] f.x.j.JasmineDiaryApplication            : Started JasmineDiaryApplication in 0.436 seconds (JVM running for 63.106)
-2024-12-20 17:09:55.770  INFO 35403 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation delta:
+2025-01-02 16:35:05.067  INFO 32679 --- [restartedMain] f.x.j.JasmineDiaryApplication            : Starting JasmineDiaryApplication using Java 17.0.12 on xysimjdeMacBook-Pro.local with PID 32679 (/Users/xysimj/IdeaProjects/JasmineDiary/target/classes started by xysimj in /Users/xysimj/IdeaProjects/JasmineDiary)
+2025-01-02 16:35:05.071  INFO 32679 --- [restartedMain] f.x.j.JasmineDiaryApplication            : No active profile set, falling back to default profiles: default
+2025-01-02 16:35:05.093  INFO 32679 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-01-02 16:35:05.093  INFO 32679 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-01-02 16:35:05.431  INFO 32679 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2025-01-02 16:35:05.432  INFO 32679 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-01-02 16:35:05.443  INFO 32679 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
+2025-01-02 16:35:06.016  INFO 32679 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7979 (http)
+2025-01-02 16:35:06.022  INFO 32679 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-02 16:35:06.022  INFO 32679 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
+2025-01-02 16:35:06.057  INFO 32679 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-02 16:35:06.057  INFO 32679 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 964 ms
+2025-01-02 16:35:06.303  WARN 32679 --- [restartedMain] c.b.m.core.injector.methods.Insert       : [fly.xysimj.jasminediary.mapper.UserMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+2025-01-02 16:35:06.947  INFO 32679 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-01-02 16:35:07.250  INFO 32679 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7979 (http) with context path ''
+2025-01-02 16:35:07.493  INFO 32679 --- [restartedMain] f.x.j.JasmineDiaryApplication            : Started JasmineDiaryApplication in 2.564 seconds (JVM running for 2.973)
+2025-01-02 16:35:32.584  INFO 32679 --- [http-nio-7979-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-01-02 16:35:32.585  INFO 32679 --- [http-nio-7979-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-01-02 16:35:32.587  INFO 32679 --- [http-nio-7979-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-01-02 16:35:32.668  INFO 32679 --- [http-nio-7979-exec-1] org.slf4j.LoggerFactory                  : ========================================== Start ==========================================
+2025-01-02 16:35:32.668  INFO 32679 --- [http-nio-7979-exec-1] org.slf4j.LoggerFactory                  : URL            : http://localhost:7979/fyl/user/login
+2025-01-02 16:35:32.669  INFO 32679 --- [http-nio-7979-exec-1] org.slf4j.LoggerFactory                  : Description    : 
+2025-01-02 16:35:32.669  INFO 32679 --- [http-nio-7979-exec-1] org.slf4j.LoggerFactory                  : HTTP Method    : POST
+2025-01-02 16:35:32.669  INFO 32679 --- [http-nio-7979-exec-1] org.slf4j.LoggerFactory                  : Class Method   : fly.xysimj.jasminediary.controller.UserController.login
+2025-01-02 16:35:32.669  INFO 32679 --- [http-nio-7979-exec-1] org.slf4j.LoggerFactory                  : IP             : 0:0:0:0:0:0:0:1
+2025-01-02 16:35:32.729  INFO 32679 --- [http-nio-7979-exec-1] org.slf4j.LoggerFactory                  : Request Args   : {"password":"123","username":"Jack"}{"attributeNames":[],"creationTime":1735806932655,"id":"01C816CE9DAB59D610B3CE9ADB815561","lastAccessedTime":1735806932655,"maxInactiveInterval":1800,"new":true,"servletContext":{"attributeNames":["javax.servlet.context.tempdir","org.apache.catalina.resources","org.apache.catalina.webappVersion","org.springframework.web.context.WebApplicationContext.ROOT","org.springframework.web.context.support.ServletContextScope","org.apache.tomcat.InstanceManager","org.apache.catalina.jsp_classpath","javax.websocket.server.ServerContainer","org.apache.tomcat.JarScanner","org.springframework.web.servlet.FrameworkServlet.CONTEXT.dispatcherServlet"],"contextPath":"","defaultSessionTrackingModes":["COOKIE","URL"],"effectiveMajorVersion":3,"effectiveMinorVersion":0,"effectiveSessionTrackingModes":["COOKIE","URL"],"filterRegistrations":{"Tomcat WebSocket (JSR356) Filter":{"className":"org.apache.tomcat.websocket.server.WsFilter","initParameters":{},"name":"Tomcat WebSocket (JSR356) Filter","servletNameMappings":[],"urlPatternMappings":["/*"]},"characterEncodingFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedCharacterEncodingFilter","initParameters":{},"name":"characterEncodingFilter","servletNameMappings":[],"urlPatternMappings":["/*"]}},"initParameterNames":[],"majorVersion":4,"minorVersion":0,"serverInfo":"Apache Tomcat/9.0.55","servletContextName":"application","servletNames":[],"servletRegistrations":{"dispatcherServlet":{"className":"org.springframework.web.servlet.DispatcherServlet","initParameters":{},"mappings":["/"],"name":"dispatcherServlet"}},"servlets":[],"sessionCookieConfig":{"httpOnly":false,"maxAge":-1,"secure":false},"sessionTimeout":30,"virtualServerName":"Tomcat/localhost"},"sessionContext":{"ids":[]},"valueNames":[]}
+2025-01-02 16:35:32.751  INFO 32679 --- [http-nio-7979-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-02 16:35:33.851 ERROR 32679 --- [http-nio-7979-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Exception during pool initialization.
 
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
 
-==========================
-CONDITION EVALUATION DELTA
-==========================
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:828) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:448) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) ~[HikariCP-4.0.3.jar:na]
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:159) ~[spring-jdbc-5.3.13.jar:5.3.13]
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:117) ~[spring-jdbc-5.3.13.jar:5.3.13]
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:80) ~[spring-jdbc-5.3.13.jar:5.3.13]
+	at org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:80) ~[mybatis-spring-2.1.2.jar:2.1.2]
+	at org.mybatis.spring.transaction.SpringManagedTransaction.getConnection(SpringManagedTransaction.java:67) ~[mybatis-spring-2.1.2.jar:2.1.2]
+	at org.apache.ibatis.executor.BaseExecutor.getConnection(BaseExecutor.java:348) ~[mybatis-3.5.16.jar:3.5.16]
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:89) ~[mybatis-3.5.16.jar:3.5.16]
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:64) ~[mybatis-3.5.16.jar:3.5.16]
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:336) ~[mybatis-3.5.16.jar:3.5.16]
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:158) ~[mybatis-3.5.16.jar:3.5.16]
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:110) ~[mybatis-3.5.16.jar:3.5.16]
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:90) ~[mybatis-3.5.16.jar:3.5.16]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:154) ~[mybatis-3.5.16.jar:3.5.16]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147) ~[mybatis-3.5.16.jar:3.5.16]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:142) ~[mybatis-3.5.16.jar:3.5.16]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:75) ~[mybatis-3.5.16.jar:3.5.16]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:425) ~[mybatis-spring-2.1.2.jar:2.1.2]
+	at jdk.proxy2/jdk.proxy2.$Proxy87.selectOne(Unknown Source) ~[na:na]
+	at org.mybatis.spring.SqlSessionTemplate.selectOne(SqlSessionTemplate.java:160) ~[mybatis-spring-2.1.2.jar:2.1.2]
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.execute(MybatisMapperMethod.java:87) ~[mybatis-plus-core-3.5.9.jar:3.5.9]
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy$PlainMethodInvoker.invoke(MybatisMapperProxy.java:152) ~[mybatis-plus-core-3.5.9.jar:3.5.9]
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89) ~[mybatis-plus-core-3.5.9.jar:3.5.9]
+	at jdk.proxy3/jdk.proxy3.$Proxy93.getUser(Unknown Source) ~[na:na]
+	at fly.xysimj.jasminediary.service.UserService.userLogin(UserService.java:49) ~[classes/:na]
+	at fly.xysimj.jasminediary.controller.UserController.login(UserController.java:50) ~[classes/:na]
+	at fly.xysimj.jasminediary.controller.UserController$$FastClassBySpringCGLIB$$9ba261be.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.13.jar:5.3.13]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:783) ~[spring-aop-5.3.13.jar:5.3.13]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.13.jar:5.3.13]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753) ~[spring-aop-5.3.13.jar:5.3.13]
+	at org.springframework.aop.aspectj.AspectJAfterAdvice.invoke(AspectJAfterAdvice.java:49) ~[spring-aop-5.3.13.jar:5.3.13]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.13.jar:5.3.13]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753) ~[spring-aop-5.3.13.jar:5.3.13]
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:58) ~[spring-aop-5.3.13.jar:5.3.13]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.13.jar:5.3.13]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753) ~[spring-aop-5.3.13.jar:5.3.13]
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:89) ~[spring-aop-5.3.13.jar:5.3.13]
+	at fly.xysimj.jasminediary.config.aspect.LogPrintAspect.doAround(LogPrintAspect.java:76) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:634) ~[spring-aop-5.3.13.jar:5.3.13]
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:624) ~[spring-aop-5.3.13.jar:5.3.13]
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:72) ~[spring-aop-5.3.13.jar:5.3.13]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.13.jar:5.3.13]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753) ~[spring-aop-5.3.13.jar:5.3.13]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-5.3.13.jar:5.3.13]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.13.jar:5.3.13]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753) ~[spring-aop-5.3.13.jar:5.3.13]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:698) ~[spring-aop-5.3.13.jar:5.3.13]
+	at fly.xysimj.jasminediary.controller.UserController$$EnhancerBySpringCGLIB$$1440a40e.login(<generated>) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.13.jar:5.3.13]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.13.jar:5.3.13]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.13.jar:5.3.13]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.13.jar:5.3.13]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.13.jar:5.3.13]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.13.jar:5.3.13]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067) ~[spring-webmvc-5.3.13.jar:5.3.13]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.13.jar:5.3.13]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.13.jar:5.3.13]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.13.jar:5.3.13]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681) ~[tomcat-embed-core-9.0.55.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.13.jar:5.3.13]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.55.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.55.jar:9.0.55]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.13.jar:5.3.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.13.jar:5.3.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1722) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
 
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[na:na]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:89) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:120) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:948) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:818) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	... 108 common frames omitted
+Caused by: java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:554) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602) ~[na:na]
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:633) ~[na:na]
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:156) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:63) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	... 111 common frames omitted
 
-Positive matches:
------------------
+2025-01-02 16:35:33.858  INFO 32679 --- [http-nio-7979-exec-1] org.slf4j.LoggerFactory                  : =========================================== End ===========================================
 
-   WebMvcAutoConfiguration matched:
-      - @ConditionalOnClass found required classes 'javax.servlet.Servlet', 'org.springframework.web.servlet.DispatcherServlet', 'org.springframework.web.servlet.config.annotation.WebMvcConfigurer' (OnClassCondition)
-      - found 'session' scope (OnWebApplicationCondition)
-      - @ConditionalOnMissingBean (types: org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport; SearchStrategy: all) did not find any beans (OnBeanCondition)
+2025-01-02 16:36:01.228  INFO 32679 --- [http-nio-7979-exec-3] org.slf4j.LoggerFactory                  : ========================================== Start ==========================================
+2025-01-02 16:36:01.229  INFO 32679 --- [http-nio-7979-exec-3] org.slf4j.LoggerFactory                  : URL            : http://localhost:7979/fyl/user/login
+2025-01-02 16:36:01.229  INFO 32679 --- [http-nio-7979-exec-3] org.slf4j.LoggerFactory                  : Description    : 
+2025-01-02 16:36:01.229  INFO 32679 --- [http-nio-7979-exec-3] org.slf4j.LoggerFactory                  : HTTP Method    : POST
+2025-01-02 16:36:01.229  INFO 32679 --- [http-nio-7979-exec-3] org.slf4j.LoggerFactory                  : Class Method   : fly.xysimj.jasminediary.controller.UserController.login
+2025-01-02 16:36:01.229  INFO 32679 --- [http-nio-7979-exec-3] org.slf4j.LoggerFactory                  : IP             : 0:0:0:0:0:0:0:1
+2025-01-02 16:36:01.230  INFO 32679 --- [http-nio-7979-exec-3] org.slf4j.LoggerFactory                  : Request Args   : {"password":"123","username":"Jack"}{"attributeNames":[],"creationTime":1735806932655,"id":"01C816CE9DAB59D610B3CE9ADB815561","lastAccessedTime":1735806933898,"maxInactiveInterval":1800,"new":false,"servletContext":{"attributeNames":["javax.servlet.context.tempdir","org.apache.catalina.resources","org.apache.catalina.webappVersion","org.springframework.web.context.WebApplicationContext.ROOT","org.springframework.web.context.support.ServletContextScope","org.apache.tomcat.InstanceManager","org.apache.catalina.jsp_classpath","javax.websocket.server.ServerContainer","org.apache.tomcat.JarScanner","org.springframework.web.servlet.FrameworkServlet.CONTEXT.dispatcherServlet"],"contextPath":"","defaultSessionTrackingModes":["COOKIE","URL"],"effectiveMajorVersion":3,"effectiveMinorVersion":0,"effectiveSessionTrackingModes":["COOKIE","URL"],"filterRegistrations":{"Tomcat WebSocket (JSR356) Filter":{"className":"org.apache.tomcat.websocket.server.WsFilter","initParameters":{},"name":"Tomcat WebSocket (JSR356) Filter","servletNameMappings":[],"urlPatternMappings":["/*"]},"characterEncodingFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedCharacterEncodingFilter","initParameters":{},"name":"characterEncodingFilter","servletNameMappings":[],"urlPatternMappings":["/*"]}},"initParameterNames":[],"majorVersion":4,"minorVersion":0,"serverInfo":"Apache Tomcat/9.0.55","servletContextName":"application","servletNames":[],"servletRegistrations":{"dispatcherServlet":{"className":"org.springframework.web.servlet.DispatcherServlet","initParameters":{},"mappings":["/"],"name":"dispatcherServlet"}},"servlets":[],"sessionCookieConfig":{"httpOnly":false,"maxAge":-1,"secure":false},"sessionTimeout":30,"virtualServerName":"Tomcat/localhost"},"sessionContext":{"ids":[]},"valueNames":[]}
+2025-01-02 16:36:01.231  INFO 32679 --- [http-nio-7979-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-02 16:36:02.241 ERROR 32679 --- [http-nio-7979-exec-3] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Exception during pool initialization.
 
-   WebMvcAutoConfiguration#formContentFilter matched:
-      - @ConditionalOnProperty (spring.mvc.formcontent.filter.enabled) matched (OnPropertyCondition)
-      - @ConditionalOnMissingBean (types: org.springframework.web.filter.FormContentFilter; SearchStrategy: all) did not find any beans (OnBeanCondition)
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
 
-   WebMvcAutoConfiguration.EnableWebMvcConfiguration#flashMapManager matched:
-      - @ConditionalOnMissingBean (names: flashMapManager; SearchStrategy: all) did not find any beans (OnBeanCondition)
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:828) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:448) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) ~[HikariCP-4.0.3.jar:na]
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:159) ~[spring-jdbc-5.3.13.jar:5.3.13]
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:117) ~[spring-jdbc-5.3.13.jar:5.3.13]
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:80) ~[spring-jdbc-5.3.13.jar:5.3.13]
+	at org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:80) ~[mybatis-spring-2.1.2.jar:2.1.2]
+	at org.mybatis.spring.transaction.SpringManagedTransaction.getConnection(SpringManagedTransaction.java:67) ~[mybatis-spring-2.1.2.jar:2.1.2]
+	at org.apache.ibatis.executor.BaseExecutor.getConnection(BaseExecutor.java:348) ~[mybatis-3.5.16.jar:3.5.16]
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:89) ~[mybatis-3.5.16.jar:3.5.16]
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:64) ~[mybatis-3.5.16.jar:3.5.16]
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:336) ~[mybatis-3.5.16.jar:3.5.16]
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:158) ~[mybatis-3.5.16.jar:3.5.16]
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:110) ~[mybatis-3.5.16.jar:3.5.16]
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:90) ~[mybatis-3.5.16.jar:3.5.16]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:154) ~[mybatis-3.5.16.jar:3.5.16]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147) ~[mybatis-3.5.16.jar:3.5.16]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:142) ~[mybatis-3.5.16.jar:3.5.16]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:75) ~[mybatis-3.5.16.jar:3.5.16]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:425) ~[mybatis-spring-2.1.2.jar:2.1.2]
+	at jdk.proxy2/jdk.proxy2.$Proxy87.selectOne(Unknown Source) ~[na:na]
+	at org.mybatis.spring.SqlSessionTemplate.selectOne(SqlSessionTemplate.java:160) ~[mybatis-spring-2.1.2.jar:2.1.2]
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.execute(MybatisMapperMethod.java:87) ~[mybatis-plus-core-3.5.9.jar:3.5.9]
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy$PlainMethodInvoker.invoke(MybatisMapperProxy.java:152) ~[mybatis-plus-core-3.5.9.jar:3.5.9]
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89) ~[mybatis-plus-core-3.5.9.jar:3.5.9]
+	at jdk.proxy3/jdk.proxy3.$Proxy93.getUser(Unknown Source) ~[na:na]
+	at fly.xysimj.jasminediary.service.UserService.userLogin(UserService.java:49) ~[classes/:na]
+	at fly.xysimj.jasminediary.controller.UserController.login(UserController.java:50) ~[classes/:na]
+	at fly.xysimj.jasminediary.controller.UserController$$FastClassBySpringCGLIB$$9ba261be.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.13.jar:5.3.13]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:783) ~[spring-aop-5.3.13.jar:5.3.13]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.13.jar:5.3.13]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753) ~[spring-aop-5.3.13.jar:5.3.13]
+	at org.springframework.aop.aspectj.AspectJAfterAdvice.invoke(AspectJAfterAdvice.java:49) ~[spring-aop-5.3.13.jar:5.3.13]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.13.jar:5.3.13]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753) ~[spring-aop-5.3.13.jar:5.3.13]
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:58) ~[spring-aop-5.3.13.jar:5.3.13]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.13.jar:5.3.13]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753) ~[spring-aop-5.3.13.jar:5.3.13]
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:89) ~[spring-aop-5.3.13.jar:5.3.13]
+	at fly.xysimj.jasminediary.config.aspect.LogPrintAspect.doAround(LogPrintAspect.java:76) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:634) ~[spring-aop-5.3.13.jar:5.3.13]
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:624) ~[spring-aop-5.3.13.jar:5.3.13]
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:72) ~[spring-aop-5.3.13.jar:5.3.13]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.13.jar:5.3.13]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753) ~[spring-aop-5.3.13.jar:5.3.13]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-5.3.13.jar:5.3.13]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.13.jar:5.3.13]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753) ~[spring-aop-5.3.13.jar:5.3.13]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:698) ~[spring-aop-5.3.13.jar:5.3.13]
+	at fly.xysimj.jasminediary.controller.UserController$$EnhancerBySpringCGLIB$$1440a40e.login(<generated>) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.13.jar:5.3.13]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.13.jar:5.3.13]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.13.jar:5.3.13]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.13.jar:5.3.13]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.13.jar:5.3.13]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.13.jar:5.3.13]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067) ~[spring-webmvc-5.3.13.jar:5.3.13]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.13.jar:5.3.13]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.13.jar:5.3.13]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.13.jar:5.3.13]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681) ~[tomcat-embed-core-9.0.55.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.13.jar:5.3.13]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.55.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.55.jar:9.0.55]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.13.jar:5.3.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.13.jar:5.3.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1722) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
 
-   WebMvcAutoConfiguration.EnableWebMvcConfiguration#localeResolver matched:
-      - @ConditionalOnMissingBean (names: localeResolver; SearchStrategy: all) did not find any beans (OnBeanCondition)
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[na:na]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:89) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:120) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:948) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:818) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	... 108 common frames omitted
+Caused by: java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:554) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602) ~[na:na]
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:633) ~[na:na]
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:156) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:63) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	... 111 common frames omitted
 
-   WebMvcAutoConfiguration.EnableWebMvcConfiguration#themeResolver matched:
-      - @ConditionalOnMissingBean (names: themeResolver; SearchStrategy: all) did not find any beans (OnBeanCondition)
+2025-01-02 16:36:02.245  INFO 32679 --- [http-nio-7979-exec-3] org.slf4j.LoggerFactory                  : =========================================== End ===========================================
 
-   WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter#defaultViewResolver matched:
-      - @ConditionalOnMissingBean (types: org.springframework.web.servlet.view.InternalResourceViewResolver; SearchStrategy: all) did not find any beans (OnBeanCondition)
+2025-01-02 16:36:47.987  INFO 32679 --- [http-nio-7979-exec-4] org.slf4j.LoggerFactory                  : ========================================== Start ==========================================
+2025-01-02 16:36:47.988  INFO 32679 --- [http-nio-7979-exec-4] org.slf4j.LoggerFactory                  : URL            : http://localhost:7979/fyl/user/login
+2025-01-02 16:36:47.988  INFO 32679 --- [http-nio-7979-exec-4] org.slf4j.LoggerFactory                  : Description    : 
+2025-01-02 16:36:47.988  INFO 32679 --- [http-nio-7979-exec-4] org.slf4j.LoggerFactory                  : HTTP Method    : POST
+2025-01-02 16:36:47.988  INFO 32679 --- [http-nio-7979-exec-4] org.slf4j.LoggerFactory                  : Class Method   : fly.xysimj.jasminediary.controller.UserController.login
+2025-01-02 16:36:47.988  INFO 32679 --- [http-nio-7979-exec-4] org.slf4j.LoggerFactory                  : IP             : 0:0:0:0:0:0:0:1
+2025-01-02 16:36:47.989  INFO 32679 --- [http-nio-7979-exec-4] org.slf4j.LoggerFactory                  : Request Args   : {"password":"123","username":"Jack"}{"attributeNames":[],"creationTime":1735806932655,"id":"01C816CE9DAB59D610B3CE9ADB815561","lastAccessedTime":1735806962250,"maxInactiveInterval":1800,"new":false,"servletContext":{"attributeNames":["javax.servlet.context.tempdir","org.apache.catalina.resources","org.apache.catalina.webappVersion","org.springframework.web.context.WebApplicationContext.ROOT","org.springframework.web.context.support.ServletContextScope","org.apache.tomcat.InstanceManager","org.apache.catalina.jsp_classpath","javax.websocket.server.ServerContainer","org.apache.tomcat.JarScanner","org.springframework.web.servlet.FrameworkServlet.CONTEXT.dispatcherServlet"],"contextPath":"","defaultSessionTrackingModes":["COOKIE","URL"],"effectiveMajorVersion":3,"effectiveMinorVersion":0,"effectiveSessionTrackingModes":["COOKIE","URL"],"filterRegistrations":{"Tomcat WebSocket (JSR356) Filter":{"className":"org.apache.tomcat.websocket.server.WsFilter","initParameters":{},"name":"Tomcat WebSocket (JSR356) Filter","servletNameMappings":[],"urlPatternMappings":["/*"]},"characterEncodingFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedCharacterEncodingFilter","initParameters":{},"name":"characterEncodingFilter","servletNameMappings":[],"urlPatternMappings":["/*"]}},"initParameterNames":[],"majorVersion":4,"minorVersion":0,"serverInfo":"Apache Tomcat/9.0.55","servletContextName":"application","servletNames":[],"servletRegistrations":{"dispatcherServlet":{"className":"org.springframework.web.servlet.DispatcherServlet","initParameters":{},"mappings":["/"],"name":"dispatcherServlet"}},"servlets":[],"sessionCookieConfig":{"httpOnly":false,"maxAge":-1,"secure":false},"sessionTimeout":30,"virtualServerName":"Tomcat/localhost"},"sessionContext":{"ids":[]},"valueNames":[]}
+2025-01-02 16:36:47.990  INFO 32679 --- [http-nio-7979-exec-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-02 16:36:48.345  INFO 32679 --- [http-nio-7979-exec-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-02 16:36:48.406  INFO 32679 --- [http-nio-7979-exec-4] org.slf4j.LoggerFactory                  : =========================================== End ===========================================
 
-   WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter#requestContextFilter matched:
-      - @ConditionalOnMissingBean (types: org.springframework.web.context.request.RequestContextListener,org.springframework.web.filter.RequestContextFilter; SearchStrategy: all) did not find any beans (OnBeanCondition)
+2025-01-02 16:36:48.408  INFO 32679 --- [http-nio-7979-exec-4] org.slf4j.LoggerFactory                  : Response Args: {"code":400,"message":"用户名或密码错误"}
+2025-01-02 16:36:48.408  INFO 32679 --- [http-nio-7979-exec-4] org.slf4j.LoggerFactory                  : Time-Consuming : 421 ms
+2025-01-02 16:37:34.567  INFO 32679 --- [http-nio-7979-exec-5] org.slf4j.LoggerFactory                  : ========================================== Start ==========================================
+2025-01-02 16:37:34.568  INFO 32679 --- [http-nio-7979-exec-5] org.slf4j.LoggerFactory                  : URL            : http://localhost:7979/fyl/user/login
+2025-01-02 16:37:34.568  INFO 32679 --- [http-nio-7979-exec-5] org.slf4j.LoggerFactory                  : Description    : 
+2025-01-02 16:37:34.568  INFO 32679 --- [http-nio-7979-exec-5] org.slf4j.LoggerFactory                  : HTTP Method    : POST
+2025-01-02 16:37:34.568  INFO 32679 --- [http-nio-7979-exec-5] org.slf4j.LoggerFactory                  : Class Method   : fly.xysimj.jasminediary.controller.UserController.login
+2025-01-02 16:37:34.568  INFO 32679 --- [http-nio-7979-exec-5] org.slf4j.LoggerFactory                  : IP             : 0:0:0:0:0:0:0:1
+2025-01-02 16:37:34.569  INFO 32679 --- [http-nio-7979-exec-5] org.slf4j.LoggerFactory                  : Request Args   : {"password":"123123","username":"Jack"}{"attributeNames":[],"creationTime":1735806932655,"id":"01C816CE9DAB59D610B3CE9ADB815561","lastAccessedTime":1735807008410,"maxInactiveInterval":1800,"new":false,"servletContext":{"attributeNames":["javax.servlet.context.tempdir","org.apache.catalina.resources","org.apache.catalina.webappVersion","org.springframework.web.context.WebApplicationContext.ROOT","org.springframework.web.context.support.ServletContextScope","org.apache.tomcat.InstanceManager","org.apache.catalina.jsp_classpath","javax.websocket.server.ServerContainer","org.apache.tomcat.JarScanner","org.springframework.web.servlet.FrameworkServlet.CONTEXT.dispatcherServlet"],"contextPath":"","defaultSessionTrackingModes":["COOKIE","URL"],"effectiveMajorVersion":3,"effectiveMinorVersion":0,"effectiveSessionTrackingModes":["COOKIE","URL"],"filterRegistrations":{"Tomcat WebSocket (JSR356) Filter":{"className":"org.apache.tomcat.websocket.server.WsFilter","initParameters":{},"name":"Tomcat WebSocket (JSR356) Filter","servletNameMappings":[],"urlPatternMappings":["/*"]},"characterEncodingFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedCharacterEncodingFilter","initParameters":{},"name":"characterEncodingFilter","servletNameMappings":[],"urlPatternMappings":["/*"]}},"initParameterNames":[],"majorVersion":4,"minorVersion":0,"serverInfo":"Apache Tomcat/9.0.55","servletContextName":"application","servletNames":[],"servletRegistrations":{"dispatcherServlet":{"className":"org.springframework.web.servlet.DispatcherServlet","initParameters":{},"mappings":["/"],"name":"dispatcherServlet"}},"servlets":[],"sessionCookieConfig":{"httpOnly":false,"maxAge":-1,"secure":false},"sessionTimeout":30,"virtualServerName":"Tomcat/localhost"},"sessionContext":{"ids":[]},"valueNames":[]}
+2025-01-02 16:37:35.045  INFO 32679 --- [http-nio-7979-exec-5] org.slf4j.LoggerFactory                  : =========================================== End ===========================================
 
-   WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter#viewResolver matched:
-      - @ConditionalOnBean (types: org.springframework.web.servlet.ViewResolver; SearchStrategy: all) found beans 'defaultViewResolver', 'beanNameViewResolver', 'mvcViewResolver'; @ConditionalOnMissingBean (names: viewResolver types: org.springframework.web.servlet.view.ContentNegotiatingViewResolver; SearchStrategy: all) did not find any beans (OnBeanCondition)
+2025-01-02 16:37:35.046  INFO 32679 --- [http-nio-7979-exec-5] org.slf4j.LoggerFactory                  : Response Args: {"code":200,"data":{"1":"e9cff7269f4b4671836524218980014f"},"message":"登录成功"}
+2025-01-02 16:37:35.046  INFO 32679 --- [http-nio-7979-exec-5] org.slf4j.LoggerFactory                  : Time-Consuming : 480 ms
+2025-01-02 16:38:40.934  INFO 32679 --- [Thread-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-01-02 16:38:40.942  INFO 32679 --- [Thread-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-01-02 16:38:41.000  INFO 32679 --- [restartedMain] f.x.j.JasmineDiaryApplication            : Starting JasmineDiaryApplication using Java 17.0.12 on xysimjdeMacBook-Pro.local with PID 32679 (/Users/xysimj/IdeaProjects/JasmineDiary/target/classes started by xysimj in /Users/xysimj/IdeaProjects/JasmineDiary)
+2025-01-02 16:38:41.000  INFO 32679 --- [restartedMain] f.x.j.JasmineDiaryApplication            : No active profile set, falling back to default profiles: default
+2025-01-02 16:38:41.133  INFO 32679 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2025-01-02 16:38:41.133  INFO 32679 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-01-02 16:38:41.137  INFO 32679 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 0 Redis repository interfaces.
+2025-01-02 16:38:41.208  INFO 32679 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7979 (http)
+2025-01-02 16:38:41.209  INFO 32679 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-02 16:38:41.209  INFO 32679 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
+2025-01-02 16:38:41.213  INFO 32679 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-02 16:38:41.213  INFO 32679 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 211 ms
+2025-01-02 16:38:41.247  WARN 32679 --- [restartedMain] c.b.m.core.injector.methods.Insert       : [fly.xysimj.jasminediary.mapper.UserMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+2025-01-02 16:38:41.475  INFO 32679 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-01-02 16:38:41.668  INFO 32679 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7979 (http) with context path ''
+2025-01-02 16:38:41.726  INFO 32679 --- [restartedMain] f.x.j.JasmineDiaryApplication            : Started JasmineDiaryApplication in 0.738 seconds (JVM running for 217.232)
+2025-01-02 16:38:41.727  INFO 32679 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-01-02 16:38:43.103  INFO 32679 --- [restartedMain] f.x.j.JasmineDiaryApplication            : Starting JasmineDiaryApplication using Java 17.0.12 on xysimjdeMacBook-Pro.local with PID 32679 (/Users/xysimj/IdeaProjects/JasmineDiary/target/classes started by xysimj in /Users/xysimj/IdeaProjects/JasmineDiary)
+2025-01-02 16:38:43.103  INFO 32679 --- [restartedMain] f.x.j.JasmineDiaryApplication            : No active profile set, falling back to default profiles: default
+2025-01-02 16:38:43.188  INFO 32679 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2025-01-02 16:38:43.188  INFO 32679 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-01-02 16:38:43.190  INFO 32679 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 0 Redis repository interfaces.
+2025-01-02 16:38:43.252  INFO 32679 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7979 (http)
+2025-01-02 16:38:43.252  INFO 32679 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-02 16:38:43.252  INFO 32679 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
+2025-01-02 16:38:43.256  INFO 32679 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-02 16:38:43.256  INFO 32679 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 152 ms
+2025-01-02 16:38:43.285  WARN 32679 --- [restartedMain] c.b.m.core.injector.methods.Insert       : [fly.xysimj.jasminediary.mapper.UserMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+2025-01-02 16:38:43.492  INFO 32679 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-01-02 16:38:43.615  INFO 32679 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7979 (http) with context path ''
+2025-01-02 16:38:43.697  INFO 32679 --- [restartedMain] f.x.j.JasmineDiaryApplication            : Started JasmineDiaryApplication in 0.604 seconds (JVM running for 219.204)
+2025-01-02 16:38:43.699  INFO 32679 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-01-02 16:40:45.027  INFO 32885 --- [restartedMain] f.x.j.JasmineDiaryApplication            : Starting JasmineDiaryApplication using Java 17.0.12 on xysimjdeMacBook-Pro.local with PID 32885 (/Users/xysimj/IdeaProjects/JasmineDiary/target/classes started by xysimj in /Users/xysimj/IdeaProjects/JasmineDiary)
+2025-01-02 16:40:45.027  INFO 32885 --- [restartedMain] f.x.j.JasmineDiaryApplication            : No active profile set, falling back to default profiles: default
+2025-01-02 16:40:45.046  INFO 32885 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-01-02 16:40:45.047  INFO 32885 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-01-02 16:40:45.363  INFO 32885 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2025-01-02 16:40:45.364  INFO 32885 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-01-02 16:40:45.375  INFO 32885 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 Redis repository interfaces.
+2025-01-02 16:40:45.957  INFO 32885 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7979 (http)
+2025-01-02 16:40:45.963  INFO 32885 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-02 16:40:45.963  INFO 32885 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
+2025-01-02 16:40:45.996  INFO 32885 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-02 16:40:45.996  INFO 32885 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 949 ms
+2025-01-02 16:40:46.239  WARN 32885 --- [restartedMain] c.b.m.core.injector.methods.Insert       : [fly.xysimj.jasminediary.mapper.UserMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+2025-01-02 16:40:46.850  INFO 32885 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-01-02 16:40:47.146  INFO 32885 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7979 (http) with context path ''
+2025-01-02 16:40:47.395  INFO 32885 --- [restartedMain] f.x.j.JasmineDiaryApplication            : Started JasmineDiaryApplication in 2.505 seconds (JVM running for 2.825)
+2025-01-02 16:40:55.392  INFO 32885 --- [http-nio-7979-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-01-02 16:40:55.393  INFO 32885 --- [http-nio-7979-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-01-02 16:40:55.396  INFO 32885 --- [http-nio-7979-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2025-01-02 16:40:55.473  INFO 32885 --- [http-nio-7979-exec-1] org.slf4j.LoggerFactory                  : ========================================== Start ==========================================
+2025-01-02 16:40:55.474  INFO 32885 --- [http-nio-7979-exec-1] org.slf4j.LoggerFactory                  : URL            : http://localhost:7979/fyl/user/login
+2025-01-02 16:40:55.475  INFO 32885 --- [http-nio-7979-exec-1] org.slf4j.LoggerFactory                  : Description    : 
+2025-01-02 16:40:55.475  INFO 32885 --- [http-nio-7979-exec-1] org.slf4j.LoggerFactory                  : HTTP Method    : POST
+2025-01-02 16:40:55.475  INFO 32885 --- [http-nio-7979-exec-1] org.slf4j.LoggerFactory                  : Class Method   : fly.xysimj.jasminediary.controller.UserController.login
+2025-01-02 16:40:55.475  INFO 32885 --- [http-nio-7979-exec-1] org.slf4j.LoggerFactory                  : IP             : 0:0:0:0:0:0:0:1
+2025-01-02 16:40:55.535  INFO 32885 --- [http-nio-7979-exec-1] org.slf4j.LoggerFactory                  : Request Args   : {"password":"123123","username":"Jack"}{"attributeNames":[],"creationTime":1735806932655,"id":"01C816CE9DAB59D610B3CE9ADB815561","lastAccessedTime":1735807055050,"maxInactiveInterval":1800,"new":false,"servletContext":{"attributeNames":["javax.servlet.context.tempdir","org.apache.catalina.resources","org.apache.catalina.webappVersion","org.springframework.web.context.WebApplicationContext.ROOT","org.springframework.web.context.support.ServletContextScope","org.apache.tomcat.InstanceManager","org.apache.catalina.jsp_classpath","javax.websocket.server.ServerContainer","org.apache.tomcat.JarScanner","org.springframework.web.servlet.FrameworkServlet.CONTEXT.dispatcherServlet"],"contextPath":"","defaultSessionTrackingModes":["COOKIE","URL"],"effectiveMajorVersion":3,"effectiveMinorVersion":0,"effectiveSessionTrackingModes":["COOKIE","URL"],"filterRegistrations":{"Tomcat WebSocket (JSR356) Filter":{"className":"org.apache.tomcat.websocket.server.WsFilter","initParameters":{},"name":"Tomcat WebSocket (JSR356) Filter","servletNameMappings":[],"urlPatternMappings":["/*"]},"characterEncodingFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedCharacterEncodingFilter","initParameters":{},"name":"characterEncodingFilter","servletNameMappings":[],"urlPatternMappings":["/*"]}},"initParameterNames":[],"majorVersion":4,"minorVersion":0,"serverInfo":"Apache Tomcat/9.0.55","servletContextName":"application","servletNames":[],"servletRegistrations":{"dispatcherServlet":{"className":"org.springframework.web.servlet.DispatcherServlet","initParameters":{},"mappings":["/"],"name":"dispatcherServlet"}},"servlets":[],"sessionCookieConfig":{"httpOnly":false,"maxAge":-1,"secure":false},"sessionTimeout":30,"virtualServerName":"Tomcat/localhost"},"sessionContext":{"ids":[]},"valueNames":[]}
+2025-01-02 16:40:55.557  INFO 32885 --- [http-nio-7979-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-02 16:40:55.901  INFO 32885 --- [http-nio-7979-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-02 16:40:56.195  INFO 32885 --- [http-nio-7979-exec-1] org.slf4j.LoggerFactory                  : =========================================== End ===========================================
 
+2025-01-02 16:40:56.196  INFO 32885 --- [http-nio-7979-exec-1] org.slf4j.LoggerFactory                  : Response Args: {"code":200,"data":{},"message":"登录成功"}
+2025-01-02 16:40:56.196  INFO 32885 --- [http-nio-7979-exec-1] org.slf4j.LoggerFactory                  : Time-Consuming : 724 ms
+2025-01-02 16:41:17.780  INFO 32885 --- [http-nio-7979-exec-4] org.slf4j.LoggerFactory                  : ========================================== Start ==========================================
+2025-01-02 16:41:17.781  INFO 32885 --- [http-nio-7979-exec-4] org.slf4j.LoggerFactory                  : URL            : http://localhost:7979/fyl/user/login
+2025-01-02 16:41:17.781  INFO 32885 --- [http-nio-7979-exec-4] org.slf4j.LoggerFactory                  : Description    : 
+2025-01-02 16:41:17.781  INFO 32885 --- [http-nio-7979-exec-4] org.slf4j.LoggerFactory                  : HTTP Method    : POST
+2025-01-02 16:41:17.781  INFO 32885 --- [http-nio-7979-exec-4] org.slf4j.LoggerFactory                  : Class Method   : fly.xysimj.jasminediary.controller.UserController.login
+2025-01-02 16:41:17.781  INFO 32885 --- [http-nio-7979-exec-4] org.slf4j.LoggerFactory                  : IP             : 0:0:0:0:0:0:0:1
+2025-01-02 16:41:17.782  INFO 32885 --- [http-nio-7979-exec-4] org.slf4j.LoggerFactory                  : Request Args   : {"password":"123123","username":"Jack"}{"attributeNames":[],"creationTime":1735806932655,"id":"01C816CE9DAB59D610B3CE9ADB815561","lastAccessedTime":1735807268565,"maxInactiveInterval":1800,"new":false,"servletContext":{"attributeNames":["javax.servlet.context.tempdir","org.apache.catalina.resources","org.apache.catalina.webappVersion","org.springframework.web.context.WebApplicationContext.ROOT","org.springframework.web.context.support.ServletContextScope","org.apache.tomcat.InstanceManager","org.apache.catalina.jsp_classpath","javax.websocket.server.ServerContainer","org.apache.tomcat.JarScanner","org.springframework.web.servlet.FrameworkServlet.CONTEXT.dispatcherServlet"],"contextPath":"","defaultSessionTrackingModes":["COOKIE","URL"],"effectiveMajorVersion":3,"effectiveMinorVersion":0,"effectiveSessionTrackingModes":["COOKIE","URL"],"filterRegistrations":{"Tomcat WebSocket (JSR356) Filter":{"className":"org.apache.tomcat.websocket.server.WsFilter","initParameters":{},"name":"Tomcat WebSocket (JSR356) Filter","servletNameMappings":[],"urlPatternMappings":["/*"]},"characterEncodingFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedCharacterEncodingFilter","initParameters":{},"name":"characterEncodingFilter","servletNameMappings":[],"urlPatternMappings":["/*"]}},"initParameterNames":[],"majorVersion":4,"minorVersion":0,"serverInfo":"Apache Tomcat/9.0.55","servletContextName":"application","servletNames":[],"servletRegistrations":{"dispatcherServlet":{"className":"org.springframework.web.servlet.DispatcherServlet","initParameters":{},"mappings":["/"],"name":"dispatcherServlet"}},"servlets":[],"sessionCookieConfig":{"httpOnly":false,"maxAge":-1,"secure":false},"sessionTimeout":30,"virtualServerName":"Tomcat/localhost"},"sessionContext":{"ids":[]},"valueNames":[]}
+2025-01-02 16:41:17.799  INFO 32885 --- [http-nio-7979-exec-4] org.slf4j.LoggerFactory                  : =========================================== End ===========================================
 
-Negative matches:
------------------
+2025-01-02 16:41:17.799  INFO 32885 --- [http-nio-7979-exec-4] org.slf4j.LoggerFactory                  : Response Args: {"code":200,"data":{},"message":"登录成功"}
+2025-01-02 16:41:17.799  INFO 32885 --- [http-nio-7979-exec-4] org.slf4j.LoggerFactory                  : Time-Consuming : 19 ms
+2025-01-02 16:43:03.720  INFO 32885 --- [http-nio-7979-exec-6] org.slf4j.LoggerFactory                  : ========================================== Start ==========================================
+2025-01-02 16:43:03.721  INFO 32885 --- [http-nio-7979-exec-6] org.slf4j.LoggerFactory                  : URL            : http://localhost:7979/fyl/user/login
+2025-01-02 16:43:03.721  INFO 32885 --- [http-nio-7979-exec-6] org.slf4j.LoggerFactory                  : Description    : 
+2025-01-02 16:43:03.721  INFO 32885 --- [http-nio-7979-exec-6] org.slf4j.LoggerFactory                  : HTTP Method    : POST
+2025-01-02 16:43:03.721  INFO 32885 --- [http-nio-7979-exec-6] org.slf4j.LoggerFactory                  : Class Method   : fly.xysimj.jasminediary.controller.UserController.login
+2025-01-02 16:43:03.721  INFO 32885 --- [http-nio-7979-exec-6] org.slf4j.LoggerFactory                  : IP             : 0:0:0:0:0:0:0:1
+2025-01-02 16:43:03.721  INFO 32885 --- [http-nio-7979-exec-6] org.slf4j.LoggerFactory                  : Request Args   : {"password":"123123","username":"Jack"}{"attributeNames":[],"creationTime":1735806932655,"id":"01C816CE9DAB59D610B3CE9ADB815561","lastAccessedTime":1735807277800,"maxInactiveInterval":1800,"new":false,"servletContext":{"attributeNames":["javax.servlet.context.tempdir","org.apache.catalina.resources","org.apache.catalina.webappVersion","org.springframework.web.context.WebApplicationContext.ROOT","org.springframework.web.context.support.ServletContextScope","org.apache.tomcat.InstanceManager","org.apache.catalina.jsp_classpath","javax.websocket.server.ServerContainer","org.apache.tomcat.JarScanner","org.springframework.web.servlet.FrameworkServlet.CONTEXT.dispatcherServlet"],"contextPath":"","defaultSessionTrackingModes":["COOKIE","URL"],"effectiveMajorVersion":3,"effectiveMinorVersion":0,"effectiveSessionTrackingModes":["COOKIE","URL"],"filterRegistrations":{"Tomcat WebSocket (JSR356) Filter":{"className":"org.apache.tomcat.websocket.server.WsFilter","initParameters":{},"name":"Tomcat WebSocket (JSR356) Filter","servletNameMappings":[],"urlPatternMappings":["/*"]},"characterEncodingFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedCharacterEncodingFilter","initParameters":{},"name":"characterEncodingFilter","servletNameMappings":[],"urlPatternMappings":["/*"]}},"initParameterNames":[],"majorVersion":4,"minorVersion":0,"serverInfo":"Apache Tomcat/9.0.55","servletContextName":"application","servletNames":[],"servletRegistrations":{"dispatcherServlet":{"className":"org.springframework.web.servlet.DispatcherServlet","initParameters":{},"mappings":["/"],"name":"dispatcherServlet"}},"servlets":[],"sessionCookieConfig":{"httpOnly":false,"maxAge":-1,"secure":false},"sessionTimeout":30,"virtualServerName":"Tomcat/localhost"},"sessionContext":{"ids":[]},"valueNames":[]}
+2025-01-02 16:43:19.875  INFO 32885 --- [http-nio-7979-exec-6] org.slf4j.LoggerFactory                  : =========================================== End ===========================================
 
-   WebMvcAutoConfiguration#hiddenHttpMethodFilter:
-      Did not match:
-         - @ConditionalOnProperty (spring.mvc.hiddenmethod.filter.enabled) did not find property 'enabled' (OnPropertyCondition)
+2025-01-02 16:43:19.877  INFO 32885 --- [http-nio-7979-exec-6] org.slf4j.LoggerFactory                  : Response Args: {"code":200,"data":{},"message":"登录成功"}
+2025-01-02 16:43:19.878  INFO 32885 --- [http-nio-7979-exec-6] org.slf4j.LoggerFactory                  : Time-Consuming : 16159 ms
+2025-01-02 16:46:08.223  WARN 32885 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m42s202ms).
+2025-01-02 16:46:15.673  INFO 32885 --- [http-nio-7979-exec-3] org.slf4j.LoggerFactory                  : ========================================== Start ==========================================
+2025-01-02 16:46:15.674  INFO 32885 --- [http-nio-7979-exec-3] org.slf4j.LoggerFactory                  : URL            : http://localhost:7979/fyl/user/addUser
+2025-01-02 16:46:15.674  INFO 32885 --- [http-nio-7979-exec-3] org.slf4j.LoggerFactory                  : Description    : 
+2025-01-02 16:46:15.674  INFO 32885 --- [http-nio-7979-exec-3] org.slf4j.LoggerFactory                  : HTTP Method    : POST
+2025-01-02 16:46:15.674  INFO 32885 --- [http-nio-7979-exec-3] org.slf4j.LoggerFactory                  : Class Method   : fly.xysimj.jasminediary.controller.UserController.addUser
+2025-01-02 16:46:15.674  INFO 32885 --- [http-nio-7979-exec-3] org.slf4j.LoggerFactory                  : IP             : 0:0:0:0:0:0:0:1
+2025-01-02 16:46:15.675  INFO 32885 --- [http-nio-7979-exec-3] org.slf4j.LoggerFactory                  : Request Args   : {"password":"admin","username":"admin"}{"attributeNames":[],"creationTime":1735806932655,"id":"01C816CE9DAB59D610B3CE9ADB815561","lastAccessedTime":1735807568230,"maxInactiveInterval":1800,"new":false,"servletContext":{"attributeNames":["javax.servlet.context.tempdir","org.apache.catalina.resources","org.apache.catalina.webappVersion","org.springframework.web.context.WebApplicationContext.ROOT","org.springframework.web.context.support.ServletContextScope","org.apache.tomcat.InstanceManager","org.apache.catalina.jsp_classpath","javax.websocket.server.ServerContainer","org.apache.tomcat.JarScanner","org.springframework.web.servlet.FrameworkServlet.CONTEXT.dispatcherServlet"],"contextPath":"","defaultSessionTrackingModes":["COOKIE","URL"],"effectiveMajorVersion":3,"effectiveMinorVersion":0,"effectiveSessionTrackingModes":["COOKIE","URL"],"filterRegistrations":{"Tomcat WebSocket (JSR356) Filter":{"className":"org.apache.tomcat.websocket.server.WsFilter","initParameters":{},"name":"Tomcat WebSocket (JSR356) Filter","servletNameMappings":[],"urlPatternMappings":["/*"]},"characterEncodingFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedCharacterEncodingFilter","initParameters":{},"name":"characterEncodingFilter","servletNameMappings":[],"urlPatternMappings":["/*"]}},"initParameterNames":[],"majorVersion":4,"minorVersion":0,"serverInfo":"Apache Tomcat/9.0.55","servletContextName":"application","servletNames":[],"servletRegistrations":{"dispatcherServlet":{"className":"org.springframework.web.servlet.DispatcherServlet","initParameters":{},"mappings":["/"],"name":"dispatcherServlet"}},"servlets":[],"sessionCookieConfig":{"httpOnly":false,"maxAge":-1,"secure":false},"sessionTimeout":30,"virtualServerName":"Tomcat/localhost"},"sessionContext":{"ids":[]},"valueNames":[]}
+2025-01-02 16:46:23.272  INFO 32885 --- [http-nio-7979-exec-3] f.x.jasminediary.service.UserService     : insert result: User(id=372326402, username=admin, password=admin, email=null, phone=null, createTime=null, updateTime=null, status=null, lastLogin=null, lastLoginIp=null, lastLoginAddress=null, loginNum=null)
+2025-01-02 16:46:23.273  INFO 32885 --- [http-nio-7979-exec-3] org.slf4j.LoggerFactory                  : =========================================== End ===========================================
 
-   WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter#beanNameViewResolver:
-      Did not match:
-         - @ConditionalOnMissingBean (types: org.springframework.web.servlet.view.BeanNameViewResolver; SearchStrategy: all) found beans of type 'org.springframework.web.servlet.view.BeanNameViewResolver' beanNameViewResolver (OnBeanCondition)
-
-
-Exclusions:
------------
-
-    None
-
-
-Unconditional classes:
-----------------------
-
-    None
-
-
-
-2024-12-20 17:09:57.607  INFO 35403 --- [restartedMain] f.x.j.JasmineDiaryApplication            : Starting JasmineDiaryApplication using Java 17.0.12 on xysimjdeMacBook-Pro.local with PID 35403 (/Users/xysimj/IdeaProjects/JasmineDiary/target/classes started by xysimj in /Users/xysimj/IdeaProjects/JasmineDiary)
-2024-12-20 17:09:57.607  INFO 35403 --- [restartedMain] f.x.j.JasmineDiaryApplication            : No active profile set, falling back to default profiles: default
-2024-12-20 17:09:57.656  INFO 35403 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2024-12-20 17:09:57.656  INFO 35403 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2024-12-20 17:09:57.659  INFO 35403 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 0 Redis repository interfaces.
-2024-12-20 17:09:57.708  INFO 35403 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7979 (http)
-2024-12-20 17:09:57.708  INFO 35403 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-12-20 17:09:57.708  INFO 35403 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
-2024-12-20 17:09:57.712  INFO 35403 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-12-20 17:09:57.712  INFO 35403 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 104 ms
-2024-12-20 17:09:57.919  INFO 35403 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2024-12-20 17:09:57.925  INFO 35403 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7979 (http) with context path ''
-2024-12-20 17:09:57.927  INFO 35403 --- [restartedMain] f.x.j.JasmineDiaryApplication            : Started JasmineDiaryApplication in 0.327 seconds (JVM running for 65.266)
-2024-12-20 17:09:57.927  INFO 35403 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation delta:
-
-
-==========================
-CONDITION EVALUATION DELTA
-==========================
-
-
-Positive matches:
------------------
-
-    None
-
-
-Negative matches:
------------------
-
-   WebMvcAutoConfiguration:
-      Did not match:
-         - @ConditionalOnMissingBean (types: org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport; SearchStrategy: all) found beans of type 'org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport' webMvcConfigurer (OnBeanCondition)
-      Matched:
-         - @ConditionalOnClass found required classes 'javax.servlet.Servlet', 'org.springframework.web.servlet.DispatcherServlet', 'org.springframework.web.servlet.config.annotation.WebMvcConfigurer' (OnClassCondition)
-         - found 'session' scope (OnWebApplicationCondition)
-
-
-Exclusions:
------------
-
-    None
-
-
-Unconditional classes:
-----------------------
-
-    None
-
-
-
-2024-12-20 17:12:24.455  INFO 35403 --- [http-nio-7979-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-12-20 17:12:24.455  INFO 35403 --- [http-nio-7979-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-12-20 17:12:24.457  INFO 35403 --- [http-nio-7979-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2024-12-20 17:19:26.990  INFO 35403 --- [restartedMain] f.x.j.JasmineDiaryApplication            : Starting JasmineDiaryApplication using Java 17.0.12 on xysimjdeMacBook-Pro.local with PID 35403 (/Users/xysimj/IdeaProjects/JasmineDiary/target/classes started by xysimj in /Users/xysimj/IdeaProjects/JasmineDiary)
-2024-12-20 17:19:26.990  INFO 35403 --- [restartedMain] f.x.j.JasmineDiaryApplication            : No active profile set, falling back to default profiles: default
-2024-12-20 17:19:27.067  INFO 35403 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2024-12-20 17:19:27.067  INFO 35403 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2024-12-20 17:19:27.071  INFO 35403 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
-2024-12-20 17:19:27.126  INFO 35403 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7979 (http)
-2024-12-20 17:19:27.126  INFO 35403 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-12-20 17:19:27.126  INFO 35403 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
-2024-12-20 17:19:27.130  INFO 35403 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-12-20 17:19:27.130  INFO 35403 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 139 ms
-2024-12-20 17:19:27.366  INFO 35403 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2024-12-20 17:19:27.373  INFO 35403 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7979 (http) with context path ''
-2024-12-20 17:19:27.374  INFO 35403 --- [restartedMain] f.x.j.JasmineDiaryApplication            : Started JasmineDiaryApplication in 0.62 seconds (JVM running for 634.719)
-2024-12-20 17:19:27.375  INFO 35403 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2024-12-20 17:20:17.304  INFO 35403 --- [restartedMain] f.x.j.JasmineDiaryApplication            : Starting JasmineDiaryApplication using Java 17.0.12 on xysimjdeMacBook-Pro.local with PID 35403 (/Users/xysimj/IdeaProjects/JasmineDiary/target/classes started by xysimj in /Users/xysimj/IdeaProjects/JasmineDiary)
-2024-12-20 17:20:17.305  INFO 35403 --- [restartedMain] f.x.j.JasmineDiaryApplication            : No active profile set, falling back to default profiles: default
-2024-12-20 17:20:17.360  INFO 35403 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2024-12-20 17:20:17.360  INFO 35403 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2024-12-20 17:20:17.363  INFO 35403 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
-2024-12-20 17:20:17.424  INFO 35403 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7979 (http)
-2024-12-20 17:20:17.424  INFO 35403 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-12-20 17:20:17.424  INFO 35403 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
-2024-12-20 17:20:17.428  INFO 35403 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-12-20 17:20:17.428  INFO 35403 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 122 ms
-2024-12-20 17:20:17.646  INFO 35403 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2024-12-20 17:20:17.653  INFO 35403 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7979 (http) with context path ''
-2024-12-20 17:20:17.654  INFO 35403 --- [restartedMain] f.x.j.JasmineDiaryApplication            : Started JasmineDiaryApplication in 0.359 seconds (JVM running for 684.999)
-2024-12-20 17:20:17.655  INFO 35403 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2024-12-20 17:21:02.525  INFO 35403 --- [restartedMain] f.x.j.JasmineDiaryApplication            : Starting JasmineDiaryApplication using Java 17.0.12 on xysimjdeMacBook-Pro.local with PID 35403 (/Users/xysimj/IdeaProjects/JasmineDiary/target/classes started by xysimj in /Users/xysimj/IdeaProjects/JasmineDiary)
-2024-12-20 17:21:02.526  INFO 35403 --- [restartedMain] f.x.j.JasmineDiaryApplication            : No active profile set, falling back to default profiles: default
-2024-12-20 17:21:02.585  INFO 35403 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2024-12-20 17:21:02.585  INFO 35403 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2024-12-20 17:21:02.588  INFO 35403 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
-2024-12-20 17:21:02.640  INFO 35403 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7979 (http)
-2024-12-20 17:21:02.640  INFO 35403 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-12-20 17:21:02.640  INFO 35403 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
-2024-12-20 17:21:02.643  INFO 35403 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-12-20 17:21:02.644  INFO 35403 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 118 ms
-2024-12-20 17:21:02.847  INFO 35403 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2024-12-20 17:21:02.852  INFO 35403 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7979 (http) with context path ''
-2024-12-20 17:21:02.854  INFO 35403 --- [restartedMain] f.x.j.JasmineDiaryApplication            : Started JasmineDiaryApplication in 0.339 seconds (JVM running for 730.199)
-2024-12-20 17:21:02.855  INFO 35403 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2024-12-20 17:22:02.418  INFO 35403 --- [restartedMain] f.x.j.JasmineDiaryApplication            : Starting JasmineDiaryApplication using Java 17.0.12 on xysimjdeMacBook-Pro.local with PID 35403 (/Users/xysimj/IdeaProjects/JasmineDiary/target/classes started by xysimj in /Users/xysimj/IdeaProjects/JasmineDiary)
-2024-12-20 17:22:02.419  INFO 35403 --- [restartedMain] f.x.j.JasmineDiaryApplication            : No active profile set, falling back to default profiles: default
-2024-12-20 17:22:02.483  INFO 35403 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2024-12-20 17:22:02.483  INFO 35403 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2024-12-20 17:22:02.486  INFO 35403 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 0 Redis repository interfaces.
-2024-12-20 17:22:02.536  INFO 35403 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7979 (http)
-2024-12-20 17:22:02.536  INFO 35403 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-12-20 17:22:02.536  INFO 35403 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
-2024-12-20 17:22:02.540  INFO 35403 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-12-20 17:22:02.540  INFO 35403 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 119 ms
-2024-12-20 17:22:02.749  INFO 35403 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2024-12-20 17:22:02.755  INFO 35403 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7979 (http) with context path ''
-2024-12-20 17:22:02.757  INFO 35403 --- [restartedMain] f.x.j.JasmineDiaryApplication            : Started JasmineDiaryApplication in 0.565 seconds (JVM running for 790.102)
-2024-12-20 17:22:02.758  INFO 35403 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2024-12-20 17:24:26.184  INFO 35403 --- [restartedMain] f.x.j.JasmineDiaryApplication            : Starting JasmineDiaryApplication using Java 17.0.12 on xysimjdeMacBook-Pro.local with PID 35403 (/Users/xysimj/IdeaProjects/JasmineDiary/target/classes started by xysimj in /Users/xysimj/IdeaProjects/JasmineDiary)
-2024-12-20 17:24:26.184  INFO 35403 --- [restartedMain] f.x.j.JasmineDiaryApplication            : No active profile set, falling back to default profiles: default
-2024-12-20 17:24:26.240  INFO 35403 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2024-12-20 17:24:26.240  INFO 35403 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2024-12-20 17:24:26.244  INFO 35403 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
-2024-12-20 17:24:26.295  INFO 35403 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7979 (http)
-2024-12-20 17:24:26.296  INFO 35403 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-12-20 17:24:26.296  INFO 35403 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
-2024-12-20 17:24:26.299  INFO 35403 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-12-20 17:24:26.299  INFO 35403 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 114 ms
-2024-12-20 17:24:26.507  INFO 35403 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2024-12-20 17:24:26.512  INFO 35403 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7979 (http) with context path ''
-2024-12-20 17:24:26.514  INFO 35403 --- [restartedMain] f.x.j.JasmineDiaryApplication            : Started JasmineDiaryApplication in 0.546 seconds (JVM running for 933.858)
-2024-12-20 17:24:26.515  INFO 35403 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2024-12-20 17:27:31.894  INFO 35403 --- [restartedMain] f.x.j.JasmineDiaryApplication            : Starting JasmineDiaryApplication using Java 17.0.12 on xysimjdeMacBook-Pro.local with PID 35403 (/Users/xysimj/IdeaProjects/JasmineDiary/target/classes started by xysimj in /Users/xysimj/IdeaProjects/JasmineDiary)
-2024-12-20 17:27:31.894  INFO 35403 --- [restartedMain] f.x.j.JasmineDiaryApplication            : No active profile set, falling back to default profiles: default
-2024-12-20 17:27:31.948  INFO 35403 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2024-12-20 17:27:31.948  INFO 35403 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2024-12-20 17:27:31.951  INFO 35403 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 0 Redis repository interfaces.
-2024-12-20 17:27:32.001  INFO 35403 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7979 (http)
-2024-12-20 17:27:32.002  INFO 35403 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-12-20 17:27:32.002  INFO 35403 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
-2024-12-20 17:27:32.006  INFO 35403 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-12-20 17:27:32.006  INFO 35403 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 111 ms
-2024-12-20 17:27:32.018  WARN 35403 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'authorController' defined in file [/Users/xysimj/IdeaProjects/JasmineDiary/target/classes/fly/xysimj/jasminediary/controller/AuthorController.class]: Post-processing of merged bean definition failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [fly.xysimj.jasminediary.controller.AuthorController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@7cee8f33]
-2024-12-20 17:27:32.018  INFO 35403 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2024-12-20 17:27:32.021  INFO 35403 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+2025-01-02 16:46:23.274  INFO 32885 --- [http-nio-7979-exec-3] org.slf4j.LoggerFactory                  : Response Args: {"code":200,"data":"添加成功","message":""}
+2025-01-02 16:46:23.274  INFO 32885 --- [http-nio-7979-exec-3] org.slf4j.LoggerFactory                  : Time-Consuming : 7601 ms
+2025-01-02 16:51:21.898  INFO 32885 --- [Thread-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-01-02 16:51:21.907  INFO 32885 --- [Thread-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-01-02 16:51:21.996  INFO 32885 --- [restartedMain] f.x.j.JasmineDiaryApplication            : Starting JasmineDiaryApplication using Java 17.0.12 on xysimjdeMacBook-Pro.local with PID 32885 (/Users/xysimj/IdeaProjects/JasmineDiary/target/classes started by xysimj in /Users/xysimj/IdeaProjects/JasmineDiary)
+2025-01-02 16:51:21.996  INFO 32885 --- [restartedMain] f.x.j.JasmineDiaryApplication            : No active profile set, falling back to default profiles: default
+2025-01-02 16:51:22.355  INFO 32885 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2025-01-02 16:51:22.355  INFO 32885 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-01-02 16:51:22.359  INFO 32885 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+2025-01-02 16:51:22.440  INFO 32885 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7979 (http)
+2025-01-02 16:51:22.440  INFO 32885 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-02 16:51:22.440  INFO 32885 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
+2025-01-02 16:51:22.444  INFO 32885 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-02 16:51:22.444  INFO 32885 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 444 ms
+2025-01-02 16:51:22.480  WARN 32885 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authorController': Unsatisfied dependency expressed through field 'authService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authService': Unsatisfied dependency expressed through field 'authMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authMapper' defined in file [/Users/xysimj/IdeaProjects/JasmineDiary/target/classes/fly/xysimj/jasminediary/mapper/AuthMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [com/baomidou/mybatisplus/autoconfigure/MybatisPlusAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is java.io.IOException: Failed to parse mapping resource: 'file [/Users/xysimj/IdeaProjects/JasmineDiary/target/classes/mapper/UserMapper.xml]'
+2025-01-02 16:51:22.480  INFO 32885 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-01-02 16:51:22.484  INFO 32885 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2024-12-20 17:27:32.030 ERROR 35403 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+2025-01-02 16:51:22.501 ERROR 32885 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
 
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'authorController' defined in file [/Users/xysimj/IdeaProjects/JasmineDiary/target/classes/fly/xysimj/jasminediary/controller/AuthorController.class]: Post-processing of merged bean definition failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [fly.xysimj.jasminediary.controller.AuthorController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@7cee8f33]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:597) ~[spring-beans-5.3.13.jar:5.3.13]
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authorController': Unsatisfied dependency expressed through field 'authService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authService': Unsatisfied dependency expressed through field 'authMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authMapper' defined in file [/Users/xysimj/IdeaProjects/JasmineDiary/target/classes/fly/xysimj/jasminediary/mapper/AuthMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [com/baomidou/mybatisplus/autoconfigure/MybatisPlusAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is java.io.IOException: Failed to parse mapping resource: 'file [/Users/xysimj/IdeaProjects/JasmineDiary/target/classes/mapper/UserMapper.xml]'
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:659) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:639) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619) ~[spring-beans-5.3.13.jar:5.3.13]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.13.jar:5.3.13]
 	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.13.jar:5.3.13]
 	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.13.jar:5.3.13]
@@ -255,22 +494,192 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
 	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
 	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.6.1.jar:2.6.1]
-Caused by: java.lang.IllegalStateException: Failed to introspect Class [fly.xysimj.jasminediary.controller.AuthorController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@7cee8f33]
-	at org.springframework.util.ReflectionUtils.getDeclaredFields(ReflectionUtils.java:739) ~[spring-core-5.3.13.jar:5.3.13]
-	at org.springframework.util.ReflectionUtils.doWithLocalFields(ReflectionUtils.java:671) ~[spring-core-5.3.13.jar:5.3.13]
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.buildResourceMetadata(CommonAnnotationBeanPostProcessor.java:377) ~[spring-context-5.3.13.jar:5.3.13]
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.findResourceMetadata(CommonAnnotationBeanPostProcessor.java:358) ~[spring-context-5.3.13.jar:5.3.13]
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessMergedBeanDefinition(CommonAnnotationBeanPostProcessor.java:306) ~[spring-context-5.3.13.jar:5.3.13]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyMergedBeanDefinitionPostProcessors(AbstractAutowireCapableBeanFactory.java:1116) ~[spring-beans-5.3.13.jar:5.3.13]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594) ~[spring-beans-5.3.13.jar:5.3.13]
-	... 20 common frames omitted
-Caused by: java.lang.NoClassDefFoundError: fly/xysimj/jasminediary/service/AuthService
-	at java.base/java.lang.Class.getDeclaredFields0(Native Method) ~[na:na]
-	at java.base/java.lang.Class.privateGetDeclaredFields(Class.java:3297) ~[na:na]
-	at java.base/java.lang.Class.getDeclaredFields(Class.java:2371) ~[na:na]
-	at org.springframework.util.ReflectionUtils.getDeclaredFields(ReflectionUtils.java:734) ~[spring-core-5.3.13.jar:5.3.13]
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authService': Unsatisfied dependency expressed through field 'authMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authMapper' defined in file [/Users/xysimj/IdeaProjects/JasmineDiary/target/classes/fly/xysimj/jasminediary/mapper/AuthMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [com/baomidou/mybatisplus/autoconfigure/MybatisPlusAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is java.io.IOException: Failed to parse mapping resource: 'file [/Users/xysimj/IdeaProjects/JasmineDiary/target/classes/mapper/UserMapper.xml]'
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:659) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:639) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1380) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:656) ~[spring-beans-5.3.13.jar:5.3.13]
+	... 25 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authMapper' defined in file [/Users/xysimj/IdeaProjects/JasmineDiary/target/classes/fly/xysimj/jasminediary/mapper/AuthMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [com/baomidou/mybatisplus/autoconfigure/MybatisPlusAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is java.io.IOException: Failed to parse mapping resource: 'file [/Users/xysimj/IdeaProjects/JasmineDiary/target/classes/mapper/UserMapper.xml]'
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1534) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1417) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1380) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:656) ~[spring-beans-5.3.13.jar:5.3.13]
+	... 39 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [com/baomidou/mybatisplus/autoconfigure/MybatisPlusAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is java.io.IOException: Failed to parse mapping resource: 'file [/Users/xysimj/IdeaProjects/JasmineDiary/target/classes/mapper/UserMapper.xml]'
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1380) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1519) ~[spring-beans-5.3.13.jar:5.3.13]
+	... 50 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is java.io.IOException: Failed to parse mapping resource: 'file [/Users/xysimj/IdeaProjects/JasmineDiary/target/classes/mapper/UserMapper.xml]'
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-5.3.13.jar:5.3.13]
+	... 63 common frames omitted
+Caused by: java.io.IOException: Failed to parse mapping resource: 'file [/Users/xysimj/IdeaProjects/JasmineDiary/target/classes/mapper/UserMapper.xml]'
+	at com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean.buildSqlSessionFactory(MybatisSqlSessionFactoryBean.java:670) ~[mybatis-plus-spring-3.5.9.jar:3.5.9]
+	at com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean.afterPropertiesSet(MybatisSqlSessionFactoryBean.java:543) ~[mybatis-plus-spring-3.5.9.jar:3.5.9]
+	at com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean.getObject(MybatisSqlSessionFactoryBean.java:701) ~[mybatis-plus-spring-3.5.9.jar:3.5.9]
+	at com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration.sqlSessionFactory(MybatisPlusAutoConfiguration.java:213) ~[mybatis-plus-spring-boot-autoconfigure-3.5.9.jar:3.5.9]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.3.13.jar:5.3.13]
+	... 64 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [/Users/xysimj/IdeaProjects/JasmineDiary/target/classes/mapper/UserMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'fly.xysimj.jasminediary.entity.User'.  Cause: java.lang.ClassNotFoundException: Cannot find class: fly.xysimj.jasminediary.entity.User
+	at com.baomidou.mybatisplus.core.MybatisXMLMapperBuilder.configurationElement(MybatisXMLMapperBuilder.java:129) ~[mybatis-plus-core-3.5.9.jar:3.5.9]
+	at com.baomidou.mybatisplus.core.MybatisXMLMapperBuilder.parse(MybatisXMLMapperBuilder.java:102) ~[mybatis-plus-core-3.5.9.jar:3.5.9]
+	at com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean.buildSqlSessionFactory(MybatisSqlSessionFactoryBean.java:668) ~[mybatis-plus-spring-3.5.9.jar:3.5.9]
+	... 72 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'fly.xysimj.jasminediary.entity.User'.  Cause: java.lang.ClassNotFoundException: Cannot find class: fly.xysimj.jasminediary.entity.User
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:103) ~[mybatis-3.5.16.jar:3.5.16]
+	at org.apache.ibatis.builder.xml.XMLStatementBuilder.parseStatementNode(XMLStatementBuilder.java:105) ~[mybatis-3.5.16.jar:3.5.16]
+	at com.baomidou.mybatisplus.core.MybatisXMLMapperBuilder.buildStatementFromContext(MybatisXMLMapperBuilder.java:145) ~[mybatis-plus-core-3.5.9.jar:3.5.9]
+	at com.baomidou.mybatisplus.core.MybatisXMLMapperBuilder.buildStatementFromContext(MybatisXMLMapperBuilder.java:137) ~[mybatis-plus-core-3.5.9.jar:3.5.9]
+	at com.baomidou.mybatisplus.core.MybatisXMLMapperBuilder.configurationElement(MybatisXMLMapperBuilder.java:127) ~[mybatis-plus-core-3.5.9.jar:3.5.9]
+	... 74 common frames omitted
+Caused by: org.apache.ibatis.type.TypeException: Could not resolve type alias 'fly.xysimj.jasminediary.entity.User'.  Cause: java.lang.ClassNotFoundException: Cannot find class: fly.xysimj.jasminediary.entity.User
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:128) ~[mybatis-3.5.16.jar:3.5.16]
+	at org.apache.ibatis.builder.BaseBuilder.resolveAlias(BaseBuilder.java:132) ~[mybatis-3.5.16.jar:3.5.16]
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:101) ~[mybatis-3.5.16.jar:3.5.16]
+	... 78 common frames omitted
+Caused by: java.lang.ClassNotFoundException: Cannot find class: fly.xysimj.jasminediary.entity.User
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:226) ~[mybatis-3.5.16.jar:3.5.16]
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:103) ~[mybatis-3.5.16.jar:3.5.16]
+	at org.apache.ibatis.io.Resources.classForName(Resources.java:322) ~[mybatis-3.5.16.jar:3.5.16]
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:124) ~[mybatis-3.5.16.jar:3.5.16]
+	... 80 common frames omitted
+
+2025-01-02 16:51:27.993  INFO 32885 --- [restartedMain] f.x.j.JasmineDiaryApplication            : Starting JasmineDiaryApplication using Java 17.0.12 on xysimjdeMacBook-Pro.local with PID 32885 (/Users/xysimj/IdeaProjects/JasmineDiary/target/classes started by xysimj in /Users/xysimj/IdeaProjects/JasmineDiary)
+2025-01-02 16:51:27.993  INFO 32885 --- [restartedMain] f.x.j.JasmineDiaryApplication            : No active profile set, falling back to default profiles: default
+2025-01-02 16:51:28.072 ERROR 32885 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.IllegalStateException: Error processing condition on org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration.propertySourcesPlaceholderConfigurer
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:60) ~[spring-boot-autoconfigure-2.6.1.jar:2.6.1]
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForBeanMethod(ConfigurationClassBeanDefinitionReader.java:193) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:153) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:129) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:343) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:247) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:311) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:112) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:746) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:564) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.6.1.jar:2.6.1]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730) ~[spring-boot-2.6.1.jar:2.6.1]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:412) ~[spring-boot-2.6.1.jar:2.6.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302) ~[spring-boot-2.6.1.jar:2.6.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301) ~[spring-boot-2.6.1.jar:2.6.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1290) ~[spring-boot-2.6.1.jar:2.6.1]
+	at fly.xysimj.jasminediary.JasmineDiaryApplication.main(JasmineDiaryApplication.java:12) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.6.1.jar:2.6.1]
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [fly.xysimj.jasminediary.config.MyWebConfigurer] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@2dd16b35]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:481) ~[spring-core-5.3.13.jar:5.3.13]
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:358) ~[spring-core-5.3.13.jar:5.3.13]
+	at org.springframework.util.ReflectionUtils.getUniqueDeclaredMethods(ReflectionUtils.java:414) ~[spring-core-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.lambda$getTypeForFactoryMethod$2(AbstractAutowireCapableBeanFactory.java:765) ~[spring-beans-5.3.13.jar:5.3.13]
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708) ~[na:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryMethod(AbstractAutowireCapableBeanFactory.java:764) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:703) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:674) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1670) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:570) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:542) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.collectBeanNamesForType(OnBeanCondition.java:238) ~[spring-boot-autoconfigure-2.6.1.jar:2.6.1]
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:231) ~[spring-boot-autoconfigure-2.6.1.jar:2.6.1]
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:221) ~[spring-boot-autoconfigure-2.6.1.jar:2.6.1]
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchingBeans(OnBeanCondition.java:169) ~[spring-boot-autoconfigure-2.6.1.jar:2.6.1]
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchOutcome(OnBeanCondition.java:144) ~[spring-boot-autoconfigure-2.6.1.jar:2.6.1]
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47) ~[spring-boot-autoconfigure-2.6.1.jar:2.6.1]
+	... 22 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: fly/xysimj/jasminediary/interceptor/LoginInterceptor
+	at java.base/java.lang.Class.getDeclaredMethods0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3402) ~[na:na]
+	at java.base/java.lang.Class.getDeclaredMethods(Class.java:2504) ~[na:na]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:463) ~[spring-core-5.3.13.jar:5.3.13]
+	... 38 common frames omitted
+Caused by: java.lang.ClassNotFoundException: fly.xysimj.jasminediary.interceptor.LoginInterceptor
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525) ~[na:na]
+	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:467) ~[na:na]
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:145) ~[spring-boot-devtools-2.6.1.jar:2.6.1]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525) ~[na:na]
+	... 42 common frames omitted
+
+2025-01-02 16:51:28.073  WARN 32885 --- [restartedMain] o.s.boot.SpringApplication               : Unable to close ApplicationContext
+
+java.lang.IllegalStateException: Failed to introspect Class [fly.xysimj.jasminediary.config.MyWebConfigurer] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@2dd16b35]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:481) ~[spring-core-5.3.13.jar:5.3.13]
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:358) ~[spring-core-5.3.13.jar:5.3.13]
+	at org.springframework.util.ReflectionUtils.getUniqueDeclaredMethods(ReflectionUtils.java:414) ~[spring-core-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.lambda$getTypeForFactoryMethod$2(AbstractAutowireCapableBeanFactory.java:765) ~[spring-beans-5.3.13.jar:5.3.13]
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708) ~[na:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryMethod(AbstractAutowireCapableBeanFactory.java:764) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:703) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:674) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1670) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:570) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:542) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:667) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:659) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.context.support.AbstractApplicationContext.getBeansOfType(AbstractApplicationContext.java:1300) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.boot.SpringApplication.getExitCodeFromMappedException(SpringApplication.java:862) ~[spring-boot-2.6.1.jar:2.6.1]
+	at org.springframework.boot.SpringApplication.getExitCodeFromException(SpringApplication.java:850) ~[spring-boot-2.6.1.jar:2.6.1]
+	at org.springframework.boot.SpringApplication.handleExitCode(SpringApplication.java:837) ~[spring-boot-2.6.1.jar:2.6.1]
+	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:778) ~[spring-boot-2.6.1.jar:2.6.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312) ~[spring-boot-2.6.1.jar:2.6.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301) ~[spring-boot-2.6.1.jar:2.6.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1290) ~[spring-boot-2.6.1.jar:2.6.1]
+	at fly.xysimj.jasminediary.JasmineDiaryApplication.main(JasmineDiaryApplication.java:12) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.6.1.jar:2.6.1]
+Caused by: java.lang.NoClassDefFoundError: fly/xysimj/jasminediary/interceptor/LoginInterceptor
+	at java.base/java.lang.Class.getDeclaredMethods0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3402) ~[na:na]
+	at java.base/java.lang.Class.getDeclaredMethods(Class.java:2504) ~[na:na]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:463) ~[spring-core-5.3.13.jar:5.3.13]
 	... 26 common frames omitted
-Caused by: java.lang.ClassNotFoundException: fly.xysimj.jasminediary.service.AuthService
+Caused by: java.lang.ClassNotFoundException: fly.xysimj.jasminediary.interceptor.LoginInterceptor
 	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[na:na]
 	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525) ~[na:na]
@@ -280,31 +689,179 @@ Caused by: java.lang.ClassNotFoundException: fly.xysimj.jasminediary.service.Aut
 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525) ~[na:na]
 	... 30 common frames omitted
 
-2024-12-20 17:28:01.738  INFO 35403 --- [restartedMain] f.x.j.JasmineDiaryApplication            : Starting JasmineDiaryApplication using Java 17.0.12 on xysimjdeMacBook-Pro.local with PID 35403 (/Users/xysimj/IdeaProjects/JasmineDiary/target/classes started by xysimj in /Users/xysimj/IdeaProjects/JasmineDiary)
-2024-12-20 17:28:01.739  INFO 35403 --- [restartedMain] f.x.j.JasmineDiaryApplication            : No active profile set, falling back to default profiles: default
-2024-12-20 17:28:01.809  INFO 35403 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2024-12-20 17:28:01.809  INFO 35403 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2024-12-20 17:28:01.814  INFO 35403 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 Redis repository interfaces.
-2024-12-20 17:28:01.880  INFO 35403 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7979 (http)
-2024-12-20 17:28:01.880  INFO 35403 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-12-20 17:28:01.880  INFO 35403 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
-2024-12-20 17:28:01.884  INFO 35403 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
-2024-12-20 17:28:01.884  INFO 35403 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 144 ms
-2024-12-20 17:28:02.100  INFO 35403 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2024-12-20 17:28:02.106  INFO 35403 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7979 (http) with context path ''
-2024-12-20 17:28:02.108  INFO 35403 --- [restartedMain] f.x.j.JasmineDiaryApplication            : Started JasmineDiaryApplication in 0.384 seconds (JVM running for 1149.433)
-2024-12-20 17:28:02.109  INFO 35403 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2024-12-20 17:28:03.544  INFO 35403 --- [restartedMain] f.x.j.JasmineDiaryApplication            : Starting JasmineDiaryApplication using Java 17.0.12 on xysimjdeMacBook-Pro.local with PID 35403 (/Users/xysimj/IdeaProjects/JasmineDiary/target/classes started by xysimj in /Users/xysimj/IdeaProjects/JasmineDiary)
-2024-12-20 17:28:03.544  INFO 35403 --- [restartedMain] f.x.j.JasmineDiaryApplication            : No active profile set, falling back to default profiles: default
-2024-12-20 17:28:03.594  INFO 35403 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2024-12-20 17:28:03.594  INFO 35403 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2024-12-20 17:28:03.596  INFO 35403 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 0 Redis repository interfaces.
-2024-12-20 17:28:03.644  INFO 35403 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7979 (http)
-2024-12-20 17:28:03.644  INFO 35403 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-12-20 17:28:03.644  INFO 35403 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
-2024-12-20 17:28:03.647  INFO 35403 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
-2024-12-20 17:28:03.647  INFO 35403 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 102 ms
-2024-12-20 17:28:03.847  INFO 35403 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2024-12-20 17:28:03.853  INFO 35403 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7979 (http) with context path ''
-2024-12-20 17:28:03.855  INFO 35403 --- [restartedMain] f.x.j.JasmineDiaryApplication            : Started JasmineDiaryApplication in 0.317 seconds (JVM running for 1151.179)
-2024-12-20 17:28:03.855  INFO 35403 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-01-02 16:52:18.793  INFO 32885 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-01-02 16:52:18.794  INFO 32885 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-01-02 16:52:18.937  INFO 32885 --- [restartedMain] f.x.j.JasmineDiaryApplication            : Starting JasmineDiaryApplication using Java 17.0.12 on xysimjdeMacBook-Pro.local with PID 32885 (/Users/xysimj/IdeaProjects/JasmineDiary/target/classes started by xysimj in /Users/xysimj/IdeaProjects/JasmineDiary)
+2025-01-02 16:52:18.937  INFO 32885 --- [restartedMain] f.x.j.JasmineDiaryApplication            : No active profile set, falling back to default profiles: default
+2025-01-02 16:52:19.048  INFO 32885 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2025-01-02 16:52:19.048  INFO 32885 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-01-02 16:52:19.052  INFO 32885 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+2025-01-02 16:52:19.129  INFO 32885 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7979 (http)
+2025-01-02 16:52:19.129  INFO 32885 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-02 16:52:19.129  INFO 32885 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
+2025-01-02 16:52:19.134  INFO 32885 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2025-01-02 16:52:19.134  INFO 32885 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 194 ms
+2025-01-02 16:52:19.169  WARN 32885 --- [restartedMain] c.b.m.core.injector.methods.Insert       : [fly.xysimj.jasminediary.mapper.UserMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+2025-01-02 16:52:19.402  INFO 32885 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-01-02 16:52:19.535  INFO 32885 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7979 (http) with context path ''
+2025-01-02 16:52:19.585  INFO 32885 --- [restartedMain] f.x.j.JasmineDiaryApplication            : Started JasmineDiaryApplication in 0.808 seconds (JVM running for 695.025)
+2025-01-02 16:52:19.587  INFO 32885 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-01-02 17:06:51.193  INFO 32885 --- [restartedMain] f.x.j.JasmineDiaryApplication            : Starting JasmineDiaryApplication using Java 17.0.12 on xysimjdeMacBook-Pro.local with PID 32885 (/Users/xysimj/IdeaProjects/JasmineDiary/target/classes started by xysimj in /Users/xysimj/IdeaProjects/JasmineDiary)
+2025-01-02 17:06:51.193  INFO 32885 --- [restartedMain] f.x.j.JasmineDiaryApplication            : No active profile set, falling back to default profiles: default
+2025-01-02 17:06:51.325  INFO 32885 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2025-01-02 17:06:51.325  INFO 32885 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-01-02 17:06:51.329  INFO 32885 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 0 Redis repository interfaces.
+2025-01-02 17:06:51.400  INFO 32885 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7979 (http)
+2025-01-02 17:06:51.400  INFO 32885 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-02 17:06:51.400  INFO 32885 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
+2025-01-02 17:06:51.404  INFO 32885 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2025-01-02 17:06:51.404  INFO 32885 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 210 ms
+2025-01-02 17:06:51.442  WARN 32885 --- [restartedMain] c.b.m.core.injector.methods.Insert       : [fly.xysimj.jasminediary.mapper.UserMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+2025-01-02 17:06:51.659  INFO 32885 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-01-02 17:06:51.788  INFO 32885 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7979 (http) with context path ''
+2025-01-02 17:06:51.835  INFO 32885 --- [restartedMain] f.x.j.JasmineDiaryApplication            : Started JasmineDiaryApplication in 0.654 seconds (JVM running for 1567.277)
+2025-01-02 17:06:51.836  INFO 32885 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-01-02 17:12:44.222  INFO 33427 --- [restartedMain] f.x.j.JasmineDiaryApplication            : Starting JasmineDiaryApplication using Java 17.0.12 on xysimjdeMacBook-Pro.local with PID 33427 (/Users/xysimj/IdeaProjects/JasmineDiary/target/classes started by xysimj in /Users/xysimj/IdeaProjects/JasmineDiary)
+2025-01-02 17:12:44.223  INFO 33427 --- [restartedMain] f.x.j.JasmineDiaryApplication            : No active profile set, falling back to default profiles: default
+2025-01-02 17:12:44.241  INFO 33427 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-01-02 17:12:44.242  INFO 33427 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-01-02 17:12:44.564  INFO 33427 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2025-01-02 17:12:44.566  INFO 33427 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-01-02 17:12:44.578  INFO 33427 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
+2025-01-02 17:12:45.279  INFO 33427 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7979 (http)
+2025-01-02 17:12:45.285  INFO 33427 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-02 17:12:45.285  INFO 33427 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
+2025-01-02 17:12:45.318  INFO 33427 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-02 17:12:45.318  INFO 33427 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1076 ms
+2025-01-02 17:12:45.592  WARN 33427 --- [restartedMain] c.b.m.core.injector.methods.Insert       : [fly.xysimj.jasminediary.mapper.UserMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+2025-01-02 17:12:46.245  INFO 33427 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-01-02 17:12:46.529  INFO 33427 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7979 (http) with context path ''
+2025-01-02 17:12:46.770  INFO 33427 --- [restartedMain] f.x.j.JasmineDiaryApplication            : Started JasmineDiaryApplication in 2.687 seconds (JVM running for 2.992)
+2025-01-02 17:13:05.413  INFO 33427 --- [http-nio-7979-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-01-02 17:13:05.414  INFO 33427 --- [http-nio-7979-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-01-02 17:13:05.417  INFO 33427 --- [http-nio-7979-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2025-01-02 17:13:05.485  INFO 33427 --- [http-nio-7979-exec-1] org.slf4j.LoggerFactory                  : ========================================== Start ==========================================
+2025-01-02 17:13:05.486  INFO 33427 --- [http-nio-7979-exec-1] org.slf4j.LoggerFactory                  : URL            : http://localhost:7979/fyl/user/login
+2025-01-02 17:13:05.486  INFO 33427 --- [http-nio-7979-exec-1] org.slf4j.LoggerFactory                  : Description    : 
+2025-01-02 17:13:05.486  INFO 33427 --- [http-nio-7979-exec-1] org.slf4j.LoggerFactory                  : HTTP Method    : POST
+2025-01-02 17:13:05.487  INFO 33427 --- [http-nio-7979-exec-1] org.slf4j.LoggerFactory                  : Class Method   : fly.xysimj.jasminediary.controller.UserController.login
+2025-01-02 17:13:05.487  INFO 33427 --- [http-nio-7979-exec-1] org.slf4j.LoggerFactory                  : IP             : 0:0:0:0:0:0:0:1
+2025-01-02 17:13:05.548  INFO 33427 --- [http-nio-7979-exec-1] org.slf4j.LoggerFactory                  : Request Args   : {"password":"123123","username":"Jack"}{"attributeNames":[],"creationTime":1735806932655,"id":"01C816CE9DAB59D610B3CE9ADB815561","lastAccessedTime":1735807583278,"maxInactiveInterval":1800,"new":false,"servletContext":{"attributeNames":["javax.servlet.context.tempdir","org.apache.catalina.resources","org.apache.catalina.webappVersion","org.springframework.web.context.WebApplicationContext.ROOT","org.springframework.web.context.support.ServletContextScope","org.apache.tomcat.InstanceManager","org.apache.catalina.jsp_classpath","javax.websocket.server.ServerContainer","org.apache.tomcat.JarScanner","org.springframework.web.servlet.FrameworkServlet.CONTEXT.dispatcherServlet"],"contextPath":"","defaultSessionTrackingModes":["COOKIE","URL"],"effectiveMajorVersion":3,"effectiveMinorVersion":0,"effectiveSessionTrackingModes":["COOKIE","URL"],"filterRegistrations":{"Tomcat WebSocket (JSR356) Filter":{"className":"org.apache.tomcat.websocket.server.WsFilter","initParameters":{},"name":"Tomcat WebSocket (JSR356) Filter","servletNameMappings":[],"urlPatternMappings":["/*"]},"characterEncodingFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedCharacterEncodingFilter","initParameters":{},"name":"characterEncodingFilter","servletNameMappings":[],"urlPatternMappings":["/*"]}},"initParameterNames":[],"majorVersion":4,"minorVersion":0,"serverInfo":"Apache Tomcat/9.0.55","servletContextName":"application","servletNames":[],"servletRegistrations":{"dispatcherServlet":{"className":"org.springframework.web.servlet.DispatcherServlet","initParameters":{},"mappings":["/"],"name":"dispatcherServlet"}},"servlets":[],"sessionCookieConfig":{"httpOnly":false,"maxAge":-1,"secure":false},"sessionTimeout":30,"virtualServerName":"Tomcat/localhost"},"sessionContext":{"ids":[]},"valueNames":[]}
+2025-01-02 17:13:05.569  INFO 33427 --- [http-nio-7979-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-02 17:13:05.926  INFO 33427 --- [http-nio-7979-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-02 17:13:09.307  INFO 33427 --- [http-nio-7979-exec-1] org.slf4j.LoggerFactory                  : =========================================== End ===========================================
+
+2025-01-02 17:13:09.308  INFO 33427 --- [http-nio-7979-exec-1] org.slf4j.LoggerFactory                  : Response Args: {"code":200,"data":{},"message":"登录成功"}
+2025-01-02 17:13:09.308  INFO 33427 --- [http-nio-7979-exec-1] org.slf4j.LoggerFactory                  : Time-Consuming : 3824 ms
+2025-01-02 17:16:14.711  INFO 33427 --- [http-nio-7979-exec-7] org.slf4j.LoggerFactory                  : ========================================== Start ==========================================
+2025-01-02 17:16:14.712  INFO 33427 --- [http-nio-7979-exec-7] org.slf4j.LoggerFactory                  : URL            : http://localhost:7979/fyl/user/deleteUser
+2025-01-02 17:16:14.712  INFO 33427 --- [http-nio-7979-exec-7] org.slf4j.LoggerFactory                  : Description    : 
+2025-01-02 17:16:14.712  INFO 33427 --- [http-nio-7979-exec-7] org.slf4j.LoggerFactory                  : HTTP Method    : POST
+2025-01-02 17:16:14.712  INFO 33427 --- [http-nio-7979-exec-7] org.slf4j.LoggerFactory                  : Class Method   : fly.xysimj.jasminediary.controller.UserController.deleteUsr
+2025-01-02 17:16:14.712  INFO 33427 --- [http-nio-7979-exec-7] org.slf4j.LoggerFactory                  : IP             : 0:0:0:0:0:0:0:1
+2025-01-02 17:16:14.713  INFO 33427 --- [http-nio-7979-exec-7] org.slf4j.LoggerFactory                  : Request Args   : {"id":3,"password":"123","username":"Paul"}{"attributeNames":[],"creationTime":1735806932655,"id":"01C816CE9DAB59D610B3CE9ADB815561","lastAccessedTime":1735809310789,"maxInactiveInterval":1800,"new":false,"servletContext":{"attributeNames":["javax.servlet.context.tempdir","org.apache.catalina.resources","org.apache.catalina.webappVersion","org.springframework.web.context.WebApplicationContext.ROOT","org.springframework.web.context.support.ServletContextScope","org.apache.tomcat.InstanceManager","org.apache.catalina.jsp_classpath","javax.websocket.server.ServerContainer","org.apache.tomcat.JarScanner","org.springframework.web.servlet.FrameworkServlet.CONTEXT.dispatcherServlet"],"contextPath":"","defaultSessionTrackingModes":["COOKIE","URL"],"effectiveMajorVersion":3,"effectiveMinorVersion":0,"effectiveSessionTrackingModes":["COOKIE","URL"],"filterRegistrations":{"Tomcat WebSocket (JSR356) Filter":{"className":"org.apache.tomcat.websocket.server.WsFilter","initParameters":{},"name":"Tomcat WebSocket (JSR356) Filter","servletNameMappings":[],"urlPatternMappings":["/*"]},"characterEncodingFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedCharacterEncodingFilter","initParameters":{},"name":"characterEncodingFilter","servletNameMappings":[],"urlPatternMappings":["/*"]}},"initParameterNames":[],"majorVersion":4,"minorVersion":0,"serverInfo":"Apache Tomcat/9.0.55","servletContextName":"application","servletNames":[],"servletRegistrations":{"dispatcherServlet":{"className":"org.springframework.web.servlet.DispatcherServlet","initParameters":{},"mappings":["/"],"name":"dispatcherServlet"}},"servlets":[],"sessionCookieConfig":{"httpOnly":false,"maxAge":-1,"secure":false},"sessionTimeout":30,"virtualServerName":"Tomcat/localhost"},"sessionContext":{"ids":[]},"valueNames":[]}
+2025-01-02 17:16:14.714  INFO 33427 --- [http-nio-7979-exec-7] f.x.j.controller.UserController          : 注销账号
+2025-01-02 17:16:14.722  INFO 33427 --- [http-nio-7979-exec-7] org.slf4j.LoggerFactory                  : =========================================== End ===========================================
+
+2025-01-02 17:16:54.191  INFO 33427 --- [http-nio-7979-exec-8] org.slf4j.LoggerFactory                  : ========================================== Start ==========================================
+2025-01-02 17:16:54.192  INFO 33427 --- [http-nio-7979-exec-8] org.slf4j.LoggerFactory                  : URL            : http://localhost:7979/fyl/user/deleteUser
+2025-01-02 17:16:54.192  INFO 33427 --- [http-nio-7979-exec-8] org.slf4j.LoggerFactory                  : Description    : 
+2025-01-02 17:16:54.192  INFO 33427 --- [http-nio-7979-exec-8] org.slf4j.LoggerFactory                  : HTTP Method    : POST
+2025-01-02 17:16:54.192  INFO 33427 --- [http-nio-7979-exec-8] org.slf4j.LoggerFactory                  : Class Method   : fly.xysimj.jasminediary.controller.UserController.deleteUsr
+2025-01-02 17:16:54.192  INFO 33427 --- [http-nio-7979-exec-8] org.slf4j.LoggerFactory                  : IP             : 0:0:0:0:0:0:0:1
+2025-01-02 17:16:54.193  INFO 33427 --- [http-nio-7979-exec-8] org.slf4j.LoggerFactory                  : Request Args   : {"id":3,"password":"123","username":"Paul"}{"attributeNames":[],"creationTime":1735806932655,"id":"01C816CE9DAB59D610B3CE9ADB815561","lastAccessedTime":1735809374725,"maxInactiveInterval":1800,"new":false,"servletContext":{"attributeNames":["javax.servlet.context.tempdir","org.apache.catalina.resources","org.apache.catalina.webappVersion","org.springframework.web.context.WebApplicationContext.ROOT","org.springframework.web.context.support.ServletContextScope","org.apache.tomcat.InstanceManager","org.apache.catalina.jsp_classpath","javax.websocket.server.ServerContainer","org.apache.tomcat.JarScanner","org.springframework.web.servlet.FrameworkServlet.CONTEXT.dispatcherServlet"],"contextPath":"","defaultSessionTrackingModes":["COOKIE","URL"],"effectiveMajorVersion":3,"effectiveMinorVersion":0,"effectiveSessionTrackingModes":["COOKIE","URL"],"filterRegistrations":{"Tomcat WebSocket (JSR356) Filter":{"className":"org.apache.tomcat.websocket.server.WsFilter","initParameters":{},"name":"Tomcat WebSocket (JSR356) Filter","servletNameMappings":[],"urlPatternMappings":["/*"]},"characterEncodingFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedCharacterEncodingFilter","initParameters":{},"name":"characterEncodingFilter","servletNameMappings":[],"urlPatternMappings":["/*"]}},"initParameterNames":[],"majorVersion":4,"minorVersion":0,"serverInfo":"Apache Tomcat/9.0.55","servletContextName":"application","servletNames":[],"servletRegistrations":{"dispatcherServlet":{"className":"org.springframework.web.servlet.DispatcherServlet","initParameters":{},"mappings":["/"],"name":"dispatcherServlet"}},"servlets":[],"sessionCookieConfig":{"httpOnly":false,"maxAge":-1,"secure":false},"sessionTimeout":30,"virtualServerName":"Tomcat/localhost"},"sessionContext":{"ids":[]},"valueNames":[]}
+2025-01-02 17:16:54.193  INFO 33427 --- [http-nio-7979-exec-8] f.x.j.controller.UserController          : 注销账号
+2025-01-02 17:16:54.257  INFO 33427 --- [http-nio-7979-exec-8] org.slf4j.LoggerFactory                  : =========================================== End ===========================================
+
+2025-01-02 17:23:19.614  INFO 33427 --- [http-nio-7979-exec-10] org.slf4j.LoggerFactory                  : ========================================== Start ==========================================
+2025-01-02 17:23:19.615  INFO 33427 --- [http-nio-7979-exec-10] org.slf4j.LoggerFactory                  : URL            : http://localhost:7979/fyl/user/deleteUser
+2025-01-02 17:23:19.615  INFO 33427 --- [http-nio-7979-exec-10] org.slf4j.LoggerFactory                  : Description    : 
+2025-01-02 17:23:19.615  INFO 33427 --- [http-nio-7979-exec-10] org.slf4j.LoggerFactory                  : HTTP Method    : POST
+2025-01-02 17:23:19.616  INFO 33427 --- [http-nio-7979-exec-10] org.slf4j.LoggerFactory                  : Class Method   : fly.xysimj.jasminediary.controller.UserController.deleteUsr
+2025-01-02 17:23:19.616  INFO 33427 --- [http-nio-7979-exec-10] org.slf4j.LoggerFactory                  : IP             : 0:0:0:0:0:0:0:1
+2025-01-02 17:23:19.616  INFO 33427 --- [http-nio-7979-exec-10] org.slf4j.LoggerFactory                  : Request Args   : {"id":3,"password":"123","username":"Paul"}{"attributeNames":[],"creationTime":1735806932655,"id":"01C816CE9DAB59D610B3CE9ADB815561","lastAccessedTime":1735809414259,"maxInactiveInterval":1800,"new":false,"servletContext":{"attributeNames":["javax.servlet.context.tempdir","org.apache.catalina.resources","org.apache.catalina.webappVersion","org.springframework.web.context.WebApplicationContext.ROOT","org.springframework.web.context.support.ServletContextScope","org.apache.tomcat.InstanceManager","org.apache.catalina.jsp_classpath","javax.websocket.server.ServerContainer","org.apache.tomcat.JarScanner","org.springframework.web.servlet.FrameworkServlet.CONTEXT.dispatcherServlet"],"contextPath":"","defaultSessionTrackingModes":["COOKIE","URL"],"effectiveMajorVersion":3,"effectiveMinorVersion":0,"effectiveSessionTrackingModes":["COOKIE","URL"],"filterRegistrations":{"Tomcat WebSocket (JSR356) Filter":{"className":"org.apache.tomcat.websocket.server.WsFilter","initParameters":{},"name":"Tomcat WebSocket (JSR356) Filter","servletNameMappings":[],"urlPatternMappings":["/*"]},"characterEncodingFilter":{"className":"org.springframework.boot.web.servlet.filter.OrderedCharacterEncodingFilter","initParameters":{},"name":"characterEncodingFilter","servletNameMappings":[],"urlPatternMappings":["/*"]}},"initParameterNames":[],"majorVersion":4,"minorVersion":0,"serverInfo":"Apache Tomcat/9.0.55","servletContextName":"application","servletNames":[],"servletRegistrations":{"dispatcherServlet":{"className":"org.springframework.web.servlet.DispatcherServlet","initParameters":{},"mappings":["/"],"name":"dispatcherServlet"}},"servlets":[],"sessionCookieConfig":{"httpOnly":false,"maxAge":-1,"secure":false},"sessionTimeout":30,"virtualServerName":"Tomcat/localhost"},"sessionContext":{"ids":[]},"valueNames":[]}
+2025-01-02 17:23:19.616  INFO 33427 --- [http-nio-7979-exec-10] f.x.j.controller.UserController          : 注销账号
+2025-01-02 17:23:19.636  INFO 33427 --- [http-nio-7979-exec-10] org.slf4j.LoggerFactory                  : =========================================== End ===========================================
+
+2025-01-02 17:23:19.636  INFO 33427 --- [http-nio-7979-exec-10] org.slf4j.LoggerFactory                  : Response Args: {"code":200,"data":"删除成功","message":""}
+2025-01-02 17:23:19.636  INFO 33427 --- [http-nio-7979-exec-10] org.slf4j.LoggerFactory                  : Time-Consuming : 22 ms
+2025-01-02 17:23:52.635  INFO 33427 --- [Thread-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-01-02 17:23:52.644  INFO 33427 --- [Thread-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-01-02 17:23:52.713  INFO 33427 --- [restartedMain] f.x.j.JasmineDiaryApplication            : Starting JasmineDiaryApplication using Java 17.0.12 on xysimjdeMacBook-Pro.local with PID 33427 (/Users/xysimj/IdeaProjects/JasmineDiary/target/classes started by xysimj in /Users/xysimj/IdeaProjects/JasmineDiary)
+2025-01-02 17:23:52.714  INFO 33427 --- [restartedMain] f.x.j.JasmineDiaryApplication            : No active profile set, falling back to default profiles: default
+2025-01-02 17:23:52.842  INFO 33427 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2025-01-02 17:23:52.842  INFO 33427 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-01-02 17:23:52.847  INFO 33427 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 0 Redis repository interfaces.
+2025-01-02 17:23:52.927  INFO 33427 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7979 (http)
+2025-01-02 17:23:52.928  INFO 33427 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-02 17:23:52.928  INFO 33427 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
+2025-01-02 17:23:52.932  INFO 33427 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-02 17:23:52.932  INFO 33427 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 217 ms
+2025-01-02 17:23:52.964  WARN 33427 --- [restartedMain] c.b.m.core.injector.methods.Insert       : [fly.xysimj.jasminediary.mapper.UserMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+2025-01-02 17:23:53.186  INFO 33427 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-01-02 17:23:53.322  INFO 33427 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7979 (http) with context path ''
+2025-01-02 17:23:53.373  INFO 33427 --- [restartedMain] f.x.j.JasmineDiaryApplication            : Started JasmineDiaryApplication in 0.673 seconds (JVM running for 669.559)
+2025-01-02 17:23:53.374  INFO 33427 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-01-02 17:25:20.396  INFO 33427 --- [restartedMain] f.x.j.JasmineDiaryApplication            : Starting JasmineDiaryApplication using Java 17.0.12 on xysimjdeMacBook-Pro.local with PID 33427 (/Users/xysimj/IdeaProjects/JasmineDiary/target/classes started by xysimj in /Users/xysimj/IdeaProjects/JasmineDiary)
+2025-01-02 17:25:20.397  INFO 33427 --- [restartedMain] f.x.j.JasmineDiaryApplication            : No active profile set, falling back to default profiles: default
+2025-01-02 17:25:20.507  INFO 33427 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2025-01-02 17:25:20.507  INFO 33427 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-01-02 17:25:20.512  INFO 33427 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 0 Redis repository interfaces.
+2025-01-02 17:25:20.574  INFO 33427 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7979 (http)
+2025-01-02 17:25:20.575  INFO 33427 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-02 17:25:20.575  INFO 33427 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
+2025-01-02 17:25:20.579  INFO 33427 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-02 17:25:20.579  INFO 33427 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 181 ms
+2025-01-02 17:25:20.612  WARN 33427 --- [restartedMain] c.b.m.core.injector.methods.Insert       : [fly.xysimj.jasminediary.mapper.UserMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+2025-01-02 17:25:20.815  INFO 33427 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-01-02 17:25:20.938  INFO 33427 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7979 (http) with context path ''
+2025-01-02 17:25:20.979  INFO 33427 --- [restartedMain] f.x.j.JasmineDiaryApplication            : Started JasmineDiaryApplication in 0.726 seconds (JVM running for 757.163)
+2025-01-02 17:25:20.980  INFO 33427 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-01-02 17:25:42.656  INFO 33427 --- [restartedMain] f.x.j.JasmineDiaryApplication            : Starting JasmineDiaryApplication using Java 17.0.12 on xysimjdeMacBook-Pro.local with PID 33427 (/Users/xysimj/IdeaProjects/JasmineDiary/target/classes started by xysimj in /Users/xysimj/IdeaProjects/JasmineDiary)
+2025-01-02 17:25:42.657  INFO 33427 --- [restartedMain] f.x.j.JasmineDiaryApplication            : No active profile set, falling back to default profiles: default
+2025-01-02 17:25:42.760  INFO 33427 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2025-01-02 17:25:42.760  INFO 33427 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-01-02 17:25:42.764  INFO 33427 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 0 Redis repository interfaces.
+2025-01-02 17:25:42.826  INFO 33427 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7979 (http)
+2025-01-02 17:25:42.827  INFO 33427 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-02 17:25:42.827  INFO 33427 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
+2025-01-02 17:25:42.831  INFO 33427 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-02 17:25:42.831  INFO 33427 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 173 ms
+2025-01-02 17:25:42.864  WARN 33427 --- [restartedMain] c.b.m.core.injector.methods.Insert       : [fly.xysimj.jasminediary.mapper.UserMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+2025-01-02 17:25:43.068  INFO 33427 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-01-02 17:25:43.194  INFO 33427 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7979 (http) with context path ''
+2025-01-02 17:25:43.234  INFO 33427 --- [restartedMain] f.x.j.JasmineDiaryApplication            : Started JasmineDiaryApplication in 0.588 seconds (JVM running for 779.418)
+2025-01-02 17:25:43.235  INFO 33427 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-01-02 17:28:06.810  INFO 33427 --- [http-nio-7979-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-01-02 17:28:06.812  INFO 33427 --- [http-nio-7979-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-01-02 17:28:06.818  INFO 33427 --- [http-nio-7979-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2025-01-02 17:28:17.902  INFO 33427 --- [http-nio-7979-exec-3] org.slf4j.LoggerFactory                  : ========================================== Start ==========================================
+2025-01-02 17:28:17.903  INFO 33427 --- [http-nio-7979-exec-3] org.slf4j.LoggerFactory                  : URL            : http://localhost:7979/fyl/user/getAllUser
+2025-01-02 17:28:17.903  INFO 33427 --- [http-nio-7979-exec-3] org.slf4j.LoggerFactory                  : Description    : 
+2025-01-02 17:28:17.903  INFO 33427 --- [http-nio-7979-exec-3] org.slf4j.LoggerFactory                  : HTTP Method    : GET
+2025-01-02 17:28:17.903  INFO 33427 --- [http-nio-7979-exec-3] org.slf4j.LoggerFactory                  : Class Method   : fly.xysimj.jasminediary.controller.UserController.getAllUser
+2025-01-02 17:28:17.903  INFO 33427 --- [http-nio-7979-exec-3] org.slf4j.LoggerFactory                  : IP             : 0:0:0:0:0:0:0:1
+2025-01-02 17:28:17.903  INFO 33427 --- [http-nio-7979-exec-3] org.slf4j.LoggerFactory                  : Request Args   : 
+2025-01-02 17:28:17.908  INFO 33427 --- [http-nio-7979-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2025-01-02 17:28:17.922  INFO 33427 --- [http-nio-7979-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2025-01-02 17:28:17.924  INFO 33427 --- [http-nio-7979-exec-3] org.slf4j.LoggerFactory                  : =========================================== End ===========================================
+
+2025-01-02 17:28:17.925  INFO 33427 --- [http-nio-7979-exec-3] org.slf4j.LoggerFactory                  : Response Args: [{"deleteFlag":0,"id":1,"password":"123123","username":"Jack"},{"deleteFlag":0,"id":2,"password":"123","username":"Rose"},{"deleteFlag":1,"id":3,"password":"123","username":"Paul"},{"deleteFlag":0,"id":10,"password":"test","username":"test"},{"deleteFlag":0,"id":1000002,"password":"123","username":"Rose"},{"deleteFlag":0,"id":1000003,"password":"123","username":"Paul1"},{"deleteFlag":0,"id":372326402,"password":"admin","username":"admin"}]
+2025-01-02 17:28:17.926  INFO 33427 --- [http-nio-7979-exec-3] org.slf4j.LoggerFactory                  : Time-Consuming : 24 ms
+2025-01-02 17:29:07.796  INFO 33427 --- [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2025-01-02 17:29:07.801  INFO 33427 --- [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2025-01-02 17:29:07.859  INFO 33427 --- [restartedMain] f.x.j.JasmineDiaryApplication            : Starting JasmineDiaryApplication using Java 17.0.12 on xysimjdeMacBook-Pro.local with PID 33427 (/Users/xysimj/IdeaProjects/JasmineDiary/target/classes started by xysimj in /Users/xysimj/IdeaProjects/JasmineDiary)
+2025-01-02 17:29:07.859  INFO 33427 --- [restartedMain] f.x.j.JasmineDiaryApplication            : No active profile set, falling back to default profiles: default
+2025-01-02 17:29:07.961  INFO 33427 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2025-01-02 17:29:07.961  INFO 33427 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-01-02 17:29:07.966  INFO 33427 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 0 Redis repository interfaces.
+2025-01-02 17:29:08.029  INFO 33427 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7979 (http)
+2025-01-02 17:29:08.030  INFO 33427 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-02 17:29:08.030  INFO 33427 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
+2025-01-02 17:29:08.039  INFO 33427 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-02 17:29:08.040  INFO 33427 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 179 ms
+2025-01-02 17:29:08.087  WARN 33427 --- [restartedMain] c.b.m.core.injector.methods.Insert       : [fly.xysimj.jasminediary.mapper.UserMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+2025-01-02 17:29:08.311  INFO 33427 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-01-02 17:29:08.436  INFO 33427 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7979 (http) with context path ''
+2025-01-02 17:29:08.470  INFO 33427 --- [restartedMain] f.x.j.JasmineDiaryApplication            : Started JasmineDiaryApplication in 0.619 seconds (JVM running for 984.652)
+2025-01-02 17:29:08.471  INFO 33427 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged

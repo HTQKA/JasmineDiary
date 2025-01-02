@@ -5,6 +5,9 @@ import fly.xysimj.jasminediary.entity.User;
 import fly.xysimj.jasminediary.mapper.UserMapper;
 import fly.xysimj.jasminediary.utils.JsonUtils;
 import fly.xysimj.jasminediary.utils.ProductToken;
+import io.swagger.v3.oas.models.media.XML;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.redis.core.StringRedisTemplate;
@@ -25,6 +28,7 @@ import java.util.UUID;
  **/
 @Service
 public class UserService {
+    private static final Logger log = LoggerFactory.getLogger(UserService.class);
     @Autowired
     UserMapper userMapper;
     @Autowired
@@ -50,7 +54,7 @@ public class UserService {
             return new Result(200,"登录成功",mapinfo);
             //获取登录token
         } else {
-            return new Result(400);
+            return new Result(400,"用户名或密码错误");
         }
     }
 
@@ -58,5 +62,47 @@ public class UserService {
         //User user = userMapper.getUser(username, password);
         redisTemplate.delete(adminId);
         return new Result(200,"成功登出");
+    }
+
+    public Result addUser(User user) {
+        //查询用户不存在
+        if (checkUser(user)) {
+            return Result.fail("用户已存在");
+        }
+        int insert = userMapper.insert(user);
+        log.info("insert result: " + user);
+
+        return Result.success("添加成功");
+
+    }
+
+    public void updateUser(User user) {
+        if(checkUser(user)){
+            userMapper.updateById(user);
+        }
+    }
+
+    //校验用户是否存在
+    public Boolean checkUser(User user) {
+        User user1 = userMapper.getUser(user.getUsername(), user.getPassword());
+        if (user1 !=  null){
+            return true;
+        }
+        return false;
+    }
+
+    //校验用户是否登录
+    public Boolean checkLogin(String adminId) {
+        return null;
+    }
+
+    public Result deleteUser(User user) {
+        Boolean b = checkUser(user);
+        if (b) {
+            userMapper.deleteById(user.getId());
+            return Result.success("删除成功");
+        }
+        return Result.fail("用户不存在");
+
     }
 }

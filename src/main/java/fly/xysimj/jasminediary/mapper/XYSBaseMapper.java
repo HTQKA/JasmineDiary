@@ -6,7 +6,7 @@ import org.apache.ibatis.annotations.*;
 import java.util.Collection;
 import java.util.List;
 @Mapper
-public interface BaseMapper <E,I>{
+public interface XYSBaseMapper<E,I>{
 
     @SelectProvider(type = BaseSqlProvider.class,method = "getById")
     E getById(I id);

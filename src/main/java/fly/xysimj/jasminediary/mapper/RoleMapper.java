@@ -1,5 +1,6 @@
 package fly.xysimj.jasminediary.mapper;
 
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import fly.xysimj.jasminediary.entity.Role;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
@@ -13,7 +14,7 @@ import java.util.ArrayList;
 * @Entity generator.domain.Role
 */
 @Mapper
-public interface RoleMapper  extends BaseMapper<Role,String>{
+public interface RoleMapper extends BaseMapper<Role> {
     @Select("select * from role ")
     ArrayList<Role> getAllRoles();
 

@@ -20,7 +20,7 @@
     </environments>
     <!--加载映射文件-->
     <mappers>
-<!--        <mapper resource="mapper/XYSUserMapper.xml"></mapper>-->
+        <mapper resource="mapper/UserMapper.xml"></mapper>
 
     </mappers>
 

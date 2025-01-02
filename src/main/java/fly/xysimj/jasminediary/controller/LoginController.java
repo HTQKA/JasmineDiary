@@ -45,7 +45,6 @@ public class LoginController {
             session.setAttribute("user",user);
             //查询user角色信息存入session
             System.out.println("登录成功");
-            int a = 1/0;
             return new Result(200,"登录成功");
         }
     }
@@ -70,5 +69,7 @@ public class LoginController {
     //注册权限
     //新建角色,分配权限
     //新建用户,分配角色
+
+
 
 }

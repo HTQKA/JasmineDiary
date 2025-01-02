@@ -50,6 +50,9 @@ public class Result implements Serializable {
     }
 
 
+    public static Result success() {
+        return success(null, "成功");
+    }
     public static Result success(Object data) {
         return success(data, "");
     }
