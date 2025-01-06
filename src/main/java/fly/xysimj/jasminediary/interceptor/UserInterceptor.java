@@ -2,11 +2,16 @@ package fly.xysimj.jasminediary.interceptor;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
+import com.github.benmanes.caffeine.cache.Cache;
+import fly.xysimj.jasminediary.commom.UserCache;
 import fly.xysimj.jasminediary.entity.Result;
 import fly.xysimj.jasminediary.entity.TokenException;
 import fly.xysimj.jasminediary.entity.TokenInfo;
+import fly.xysimj.jasminediary.entity.UserSession;
 import fly.xysimj.jasminediary.utils.JsonUtils;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
+import org.checkerframework.checker.units.qual.A;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.web.servlet.HandlerInterceptor;
@@ -18,6 +23,7 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.nio.charset.StandardCharsets;
+import java.util.Objects;
 
 /**
  * @program: JasmineDiary
@@ -27,9 +33,12 @@ import java.nio.charset.StandardCharsets;
  * @create: 2022-07-05 10:24
  * @Version 1.0
  **/
+@Slf4j
 public class UserInterceptor implements HandlerInterceptor {
     @Autowired
     StringRedisTemplate redisTemplate;
+    @Autowired
+    private Cache<String, Object> caffeineCache;
 
     /**
      * 调用控制器方法之前调用(Controller方法调用之前)
@@ -43,7 +52,7 @@ public class UserInterceptor implements HandlerInterceptor {
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object object)  {
         //检查用户传递的token是否合法
         TokenInfo tokenInfo = this.getUserToKen(request);
-        if (StringUtils.isBlank(tokenInfo.getAdminId()) && StringUtils.isBlank(tokenInfo.getToken())) {
+        if (StringUtils.isBlank(tokenInfo.getToken())) {
             System.out.println("没有传入对应的身份信息,返回登录");
             object = Result.fail("身份校验失败");
             String result = JSONObject.toJSONString(Result.fail("没有传入对应的身份信息,返回登录"));
@@ -51,9 +60,16 @@ public class UserInterceptor implements HandlerInterceptor {
             return false;
         }
         try {
-            String token = redisTemplate.opsForValue().get(tokenInfo.getAdminId());
-            if (token != null && token.equals(tokenInfo.getToken())){
-                System.out.println("校验成功");
+            //先从本地缓存cache中获取用户信息
+            //Object ifPresent = caffeineCache.getIfPresent(tokenInfo.getToken());
+            Object o = UserCache.get(tokenInfo.getToken());
+            if (o != null) {
+                return true;
+            }
+            //本地缓存中没有在从redis中获取用户信息
+            UserSession userSession = JSONObject.parseObject(redisTemplate.opsForValue().get(tokenInfo.getToken()), UserSession.class);
+            if (userSession != null ){
+                log.info("校验成功");
                 return true;
             }else{
                 System.out.println("校验失败,返回登录");

@@ -1,7 +1,10 @@
 package fly.xysimj.jasminediary.service;
 
+import com.github.benmanes.caffeine.cache.Cache;
+import fly.xysimj.jasminediary.commom.UserCache;
 import fly.xysimj.jasminediary.entity.Result;
 import fly.xysimj.jasminediary.entity.User;
+import fly.xysimj.jasminediary.entity.UserSession;
 import fly.xysimj.jasminediary.mapper.UserMapper;
 import fly.xysimj.jasminediary.utils.JsonUtils;
 import fly.xysimj.jasminediary.utils.ProductToken;
@@ -14,6 +17,7 @@ import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
 
 import java.sql.ResultSet;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
@@ -40,6 +44,8 @@ public class UserService {
 
     @Autowired
     private StringRedisTemplate stringRedisTemplate;
+    @Autowired
+    private Cache<String, Object> caffeineCache;
 
     public User getUser(String username, String password) {
         return userMapper.getUser(username, password);
@@ -50,7 +56,14 @@ public class UserService {
         if (null != user) {
             //redisTemplate.opsForValue().set("user", JsonUtils.objectToJson(user));
             String token = UUID.randomUUID().toString().replaceAll("-","");
-            Map<String, String> mapinfo = productToken.productToken(user.getId().toString(), token);
+            UserSession userSession = new UserSession();
+            userSession.setUserId(user.getId()+"");
+            userSession.setUsername(user.getUsername());
+            userSession.setLoginTime(new Date());
+            //本地缓存
+            //caffeineCache.put(token,userSession);
+            UserCache.add(token, userSession);
+            Map<String, UserSession> mapinfo = productToken.productToken(token,userSession);
             return new Result(200,"登录成功",mapinfo);
             //获取登录token
         } else {

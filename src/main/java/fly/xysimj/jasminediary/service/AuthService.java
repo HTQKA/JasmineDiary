@@ -34,12 +34,13 @@ public class AuthService {
     //修改权限
 
     //新增权限
+
     public int saveAuth(Auth auth){
         //新增是先判断是否有重复的权限,父权权限是否一致
         Auth byAction = authMapper.getByAction(auth);
         if(byAction ==null){
             auth.setId(IUtils.getUUID());
-            auth.setLastUpdateDate(IDate.getTimestamp());
+            auth.setLastUpdateTime(IDate.getTimestamp());
             auth.setLastUpdateBy("XYS");
             auth.setStatus("Y");
             int i = authMapper.saveAuth(auth);
