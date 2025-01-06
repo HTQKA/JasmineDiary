@@ -18,4 +18,5 @@ public interface RoleMapper extends BaseMapper<Role> {
     @Select("select * from role ")
     ArrayList<Role> getAllRoles();
 
+
 }

@@ -27,4 +27,21 @@ public class RoleService {
         return Result.fail("新增失败");
     }
 
+    public Result deleteRole(Long roleId) {
+        //查询是否存在
+        int i = roleMapper.deleteById(roleId);
+        return Result.success("删除成功");
+    }
+
+    public Result listRole() {
+        return Result.success(roleMapper.getAllRoles());
+    }
+
+    public Result updateRole(Role role) {
+        int i = roleMapper.updateById(role);
+        if (i > 0) {
+            return Result.success("更新成功");
+        }
+        return Result.fail("更新失败");
+    }
 }

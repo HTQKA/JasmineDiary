@@ -6,17 +6,13 @@ import fly.xysimj.jasminediary.entity.Result;
 import fly.xysimj.jasminediary.entity.User;
 import fly.xysimj.jasminediary.entity.UserSession;
 import fly.xysimj.jasminediary.mapper.UserMapper;
-import fly.xysimj.jasminediary.utils.JsonUtils;
 import fly.xysimj.jasminediary.utils.ProductToken;
-import io.swagger.v3.oas.models.media.XML;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
 
-import java.sql.ResultSet;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
