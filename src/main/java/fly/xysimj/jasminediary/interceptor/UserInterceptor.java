@@ -1,17 +1,15 @@
 package fly.xysimj.jasminediary.interceptor;
 
-import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.github.benmanes.caffeine.cache.Cache;
 import fly.xysimj.jasminediary.commom.UserCache;
+import fly.xysimj.jasminediary.commom.UserThreadLocal;
 import fly.xysimj.jasminediary.entity.Result;
-import fly.xysimj.jasminediary.entity.TokenException;
 import fly.xysimj.jasminediary.entity.TokenInfo;
 import fly.xysimj.jasminediary.entity.UserSession;
 import fly.xysimj.jasminediary.utils.JsonUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
-import org.checkerframework.checker.units.qual.A;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.web.servlet.HandlerInterceptor;
@@ -23,7 +21,6 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.nio.charset.StandardCharsets;
-import java.util.Objects;
 
 /**
  * @program: JasmineDiary
@@ -64,12 +61,16 @@ public class UserInterceptor implements HandlerInterceptor {
             //Object ifPresent = caffeineCache.getIfPresent(tokenInfo.getToken());
             Object o = UserCache.get(tokenInfo.getToken());
             if (o != null) {
+                //本地线程变量
+                UserThreadLocal.setUserThreadLocal(o);
                 return true;
             }
             //本地缓存中没有在从redis中获取用户信息
             UserSession userSession = JSONObject.parseObject(redisTemplate.opsForValue().get(tokenInfo.getToken()), UserSession.class);
             if (userSession != null ){
                 log.info("校验成功");
+                //本地线程变量
+                UserThreadLocal.setUserThreadLocal(userSession);
                 return true;
             }else{
                 System.out.println("校验失败,返回登录");
@@ -92,6 +93,8 @@ public class UserInterceptor implements HandlerInterceptor {
 
     @Override
     public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) throws Exception {
+        //清除本地线程变量
+        UserThreadLocal.clearUserThreadLocal();
     }
 
     /**
@@ -101,7 +104,7 @@ public class UserInterceptor implements HandlerInterceptor {
         TokenInfo info = new TokenInfo();
         String adminId = request.getHeader("adminId");
         String token = request.getHeader("token");
-        if (StringUtils.isNotBlank(adminId) && StringUtils.isNotBlank(token)) {
+        if (StringUtils.isNotBlank(token) && StringUtils.isNotBlank(token)) {
             info.setAdminId(adminId);
             info.setToken(token);
         }

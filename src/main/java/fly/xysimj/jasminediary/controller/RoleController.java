@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.*;
  **/
 @RestController
 @CrossOrigin
-@RequestMapping("/xys/role")
+@RequestMapping("/fyl/role")
 @Tag(name = "角色管理", description = "角色管理接口")
 public class RoleController {
     @Autowired

@@ -1,5 +1,7 @@
 package fly.xysimj.jasminediary.entity;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableLogic;
 import com.baomidou.mybatisplus.annotation.TableName;
 import io.swagger.v3.oas.annotations.media.Schema;
@@ -20,7 +22,8 @@ public class Role extends BaseEntity implements Serializable {
      * 主键
      */
     @Schema(description = "主键")
-    private String id;
+    @TableId(value = "id",type = IdType.ASSIGN_ID)
+    private Long id;
 
     /**
      * 角色名称

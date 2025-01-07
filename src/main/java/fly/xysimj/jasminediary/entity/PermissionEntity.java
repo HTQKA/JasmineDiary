@@ -1,5 +1,7 @@
 package fly.xysimj.jasminediary.entity;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
@@ -13,6 +15,7 @@ import lombok.Data;
 @TableName("permission")
 public class PermissionEntity extends BaseEntity {
     @Schema(description = "权限ID")
+    @TableId(value = "id", type = IdType.AUTO)
     private Integer id;
     @Schema(description = "权限名称")
     private String name;

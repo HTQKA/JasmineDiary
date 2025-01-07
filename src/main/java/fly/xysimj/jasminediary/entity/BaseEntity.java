@@ -1,14 +1,14 @@
 package fly.xysimj.jasminediary.entity;
 
-import java.util.Date;
-
 import com.baomidou.mybatisplus.annotation.FieldFill;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableLogic;
 import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.Data;
 
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * @program: JasmineDiary
@@ -19,6 +19,7 @@ import java.io.Serializable;
  * @Version 1.0
  **/
 
+@Tag(name = "基础实体类")
 @Data
 public class BaseEntity implements Serializable {
 

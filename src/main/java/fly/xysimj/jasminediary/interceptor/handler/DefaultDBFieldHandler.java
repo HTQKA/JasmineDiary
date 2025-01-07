@@ -1,8 +1,11 @@
 package fly.xysimj.jasminediary.interceptor.handler;
 
 import com.baomidou.mybatisplus.core.handlers.MetaObjectHandler;
+import fly.xysimj.jasminediary.commom.UserThreadLocal;
 import fly.xysimj.jasminediary.entity.BaseEntity;
+import fly.xysimj.jasminediary.entity.UserSession;
 import org.apache.ibatis.reflection.MetaObject;
+import org.springframework.stereotype.Component;
 
 import java.util.Date;
 import java.util.Objects;
@@ -11,20 +14,31 @@ import java.util.Objects;
  * @author XYS
  * @date 2025年01月03日 14:47
  */
+@Component
 public class DefaultDBFieldHandler implements MetaObjectHandler {
+
     @Override
     public void insertFill(MetaObject metaObject) {
         if (Objects.nonNull(metaObject) && metaObject.getOriginalObject() instanceof BaseEntity) {
             BaseEntity baseEntity = (BaseEntity) metaObject.getOriginalObject();
             Date date = new Date();
 
-            if (Objects.isNull(baseEntity.getCreateTime())) {
-                baseEntity.setCreateTime(date);
-            }
-            if (Objects.isNull(baseEntity.getLastUpdateTime())) {
-                baseEntity.setLastUpdateTime(date);
-            }
+            baseEntity.setCreateTime(date);
+            baseEntity.setLastUpdateTime(date);
+
             //获取用户信息
+            UserSession user = (UserSession)UserThreadLocal.getUser();
+            //获取请求对象
+            //HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
+            //String token = request.getHeader("token");
+            if (Objects.nonNull(user)) {
+                baseEntity.setCreateBy(user.getUsername());
+                baseEntity.setCreateById(user.getUserId());
+                baseEntity.setLastUpdateBy(user.getUsername());
+                baseEntity.setLastUpdateById(user.getUserId());
+            }
+
+
         }
     }
     @Override
@@ -32,11 +46,14 @@ public class DefaultDBFieldHandler implements MetaObjectHandler {
         if (Objects.nonNull(metaObject) && metaObject.getOriginalObject() instanceof BaseEntity) {
             BaseEntity baseEntity = (BaseEntity) metaObject.getOriginalObject();
             Date date = new Date();
+            baseEntity.setLastUpdateTime(date);
 
-            if (Objects.isNull(baseEntity.getLastUpdateTime())) {
-                baseEntity.setLastUpdateTime(date);
-            }
             //获取用户信息
+            UserSession user = (UserSession)UserThreadLocal.getUser();
+            if (Objects.nonNull(user)) {
+                baseEntity.setLastUpdateBy(user.getUsername());
+                baseEntity.setLastUpdateById(user.getUserId());
+            }
         }
     }
 }

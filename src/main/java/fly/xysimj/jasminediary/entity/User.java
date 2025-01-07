@@ -1,5 +1,7 @@
 package fly.xysimj.jasminediary.entity;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableLogic;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -20,7 +22,8 @@ import java.util.Date;
 @ApiModel(value = "用户实体类", description = "用户实体类")
 public class User {
     @ApiModelProperty(value = "用户ID", dataType = "Integer", required = true, example = "1")
-    private Integer id;
+    @TableId(type = IdType.AUTO)
+    private Long id;
     private String username;
     private String password;
     private String email;
@@ -28,7 +31,7 @@ public class User {
     private Date createTime;
     private Date updateTime;
     @Schema(description = "逻辑删除标识", example = "0", required = true)
-    @TableLogic
+    @TableLogic(value = "0", delval = "1")
     private Integer deleteFlag;
     private Integer status;
     private Date lastLoginDate;
