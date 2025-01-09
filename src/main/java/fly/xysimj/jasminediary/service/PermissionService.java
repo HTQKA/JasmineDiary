@@ -14,10 +14,10 @@ public interface PermissionService {
 
     Result addPermission(PermissionEntity parameter);
 
-    Result deletePermission(Integer permissionId);
+    Result deletePermission(Long permissionId);
 
     Result updatePermission(PermissionEntity permission);
 
-    Result getPermissionById(Integer permissionId);
+    Result getPermissionById(Long permissionId);
 
 }

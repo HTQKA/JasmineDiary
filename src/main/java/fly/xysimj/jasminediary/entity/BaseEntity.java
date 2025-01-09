@@ -8,7 +8,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.Data;
 
 import java.io.Serializable;
-import java.util.Date;
+import java.sql.Timestamp;
 
 /**
  * @program: JasmineDiary
@@ -28,7 +28,7 @@ public class BaseEntity implements Serializable {
      */
     @TableField(fill = FieldFill.INSERT)
     @ApiModelProperty(value = "创建时间", hidden = true)
-    private Date createTime;
+    private Timestamp createTime;
 
     /**
      * 创建者
@@ -49,8 +49,7 @@ public class BaseEntity implements Serializable {
      */
     @TableField(fill = FieldFill.INSERT_UPDATE)
     @ApiModelProperty(value = "更新时间", hidden = true)
-    private Date lastUpdateTime;
-
+    private Timestamp lastUpdateTime;
     /**
      * 更新者
      */
@@ -71,5 +70,6 @@ public class BaseEntity implements Serializable {
     @ApiModelProperty(value = "逻辑删除 0-未删除 1-已删除", hidden = true)
     @TableLogic(value = "0", delval = "1")
     private String deleteFlag;
+
     private static final long serialVersionUID = 1L;
 }

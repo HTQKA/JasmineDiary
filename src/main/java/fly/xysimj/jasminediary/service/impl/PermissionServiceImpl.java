@@ -29,7 +29,7 @@ public class PermissionServiceImpl implements PermissionService {
     }
 
     @Override
-    public Result deletePermission(Integer permissionId) {
+    public Result deletePermission(Long permissionId) {
         int i = permissionMapper.deleteById(permissionId);
         if (i == 1) {
             return Result.success();
@@ -45,7 +45,7 @@ public class PermissionServiceImpl implements PermissionService {
     }
 
     @Override
-    public Result getPermissionById(Integer permissionId) {
+    public Result getPermissionById(Long permissionId) {
         PermissionEntity permissionEntity = permissionMapper.selectById(permissionId);
         if (permissionEntity!= null) {
             return Result.success(permissionEntity);

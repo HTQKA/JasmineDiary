@@ -7,7 +7,7 @@ import fly.xysimj.jasminediary.entity.UserSession;
 import org.apache.ibatis.reflection.MetaObject;
 import org.springframework.stereotype.Component;
 
-import java.util.Date;
+import java.sql.Timestamp;
 import java.util.Objects;
 
 /**
@@ -21,10 +21,10 @@ public class DefaultDBFieldHandler implements MetaObjectHandler {
     public void insertFill(MetaObject metaObject) {
         if (Objects.nonNull(metaObject) && metaObject.getOriginalObject() instanceof BaseEntity) {
             BaseEntity baseEntity = (BaseEntity) metaObject.getOriginalObject();
-            Date date = new Date();
+            Timestamp timestamp = new Timestamp(System.currentTimeMillis());
 
-            baseEntity.setCreateTime(date);
-            baseEntity.setLastUpdateTime(date);
+            baseEntity.setCreateTime(timestamp);
+            baseEntity.setLastUpdateTime(timestamp);
 
             //获取用户信息
             UserSession user = (UserSession)UserThreadLocal.getUser();
@@ -45,8 +45,8 @@ public class DefaultDBFieldHandler implements MetaObjectHandler {
     public void updateFill(MetaObject metaObject) {
         if (Objects.nonNull(metaObject) && metaObject.getOriginalObject() instanceof BaseEntity) {
             BaseEntity baseEntity = (BaseEntity) metaObject.getOriginalObject();
-            Date date = new Date();
-            baseEntity.setLastUpdateTime(date);
+            Timestamp timestamp = new Timestamp(System.currentTimeMillis());
+            baseEntity.setLastUpdateTime(timestamp);
 
             //获取用户信息
             UserSession user = (UserSession)UserThreadLocal.getUser();
