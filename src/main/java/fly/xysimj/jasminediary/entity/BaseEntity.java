@@ -22,7 +22,6 @@ import java.sql.Timestamp;
 @Tag(name = "基础实体类")
 @Data
 public class BaseEntity implements Serializable {
-
     /**
      * 创建时间
      */
