@@ -1,9 +1,11 @@
 package fly.xysimj.jasminediary.controller;
 
+import com.google.code.kaptcha.impl.DefaultKaptcha;
 import fly.xysimj.jasminediary.entity.Result;
 import fly.xysimj.jasminediary.entity.User;
 import fly.xysimj.jasminediary.mapper.UserMapper;
 import fly.xysimj.jasminediary.service.UserService;
+import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -12,8 +14,13 @@ import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.HtmlUtils;
 
+import javax.imageio.ImageIO;
+import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import java.awt.image.BufferedImage;
+import java.io.ByteArrayOutputStream;
 
 
 /**
@@ -77,6 +84,50 @@ public class UserController {
     @GetMapping("/getAllUsers")
     public Result getAllUsers() {
         return Result.success(userMapper.getAllUsers());
+    }
+
+    @Autowired
+    private DefaultKaptcha captchaProducer;
+
+
+    @ApiOperation("获取验证码图片")
+    @GetMapping("/getVerificationCodePhoto")
+    public void getVerificationCodePhoto(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) throws Exception {
+        byte[] captchaOutputStream = null;
+        ByteArrayOutputStream imgOutputStream = new ByteArrayOutputStream();
+        try {
+            //生成验证码
+            String verifyCode = captchaProducer.createText();
+            //验证码字符串保存到session中
+            httpServletRequest.getSession().setAttribute("verifyCode", verifyCode);
+            BufferedImage challenge = captchaProducer.createImage(verifyCode);
+            //设置写出图片的格式
+            ImageIO.write(challenge, "jpg", imgOutputStream);
+        } catch (IllegalArgumentException e) {
+            httpServletResponse.sendError(HttpServletResponse.SC_NOT_FOUND);
+            return;
+        }
+        captchaOutputStream = imgOutputStream.toByteArray();
+        httpServletResponse.setHeader("Cache-Control", "no-store");
+        httpServletResponse.setHeader("Pragma", "no-cache");
+        httpServletResponse.setDateHeader("Expires", 0);
+        httpServletResponse.setContentType("image/jpeg");
+        ServletOutputStream responseOutputStream = httpServletResponse.getOutputStream();
+        responseOutputStream.write(captchaOutputStream);
+        responseOutputStream.flush();
+        responseOutputStream.close();
+    }
+
+
+    @ApiOperation("获取验证码")
+    @GetMapping("/getVerificationCode")
+    public Result getVerificationCode(HttpServletRequest request) {
+        Result result = new Result();
+        String verifyCode = captchaProducer.createText();
+        request.getSession().setAttribute("verifyCode", verifyCode);
+        result.setData(verifyCode);
+        return result;
+
     }
 
 }

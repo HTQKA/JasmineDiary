@@ -48,4 +48,5 @@ public class UserRoleController {
     public Result listUserRole() {
         return userRoleService.listUserRole();
     }
+
 }
