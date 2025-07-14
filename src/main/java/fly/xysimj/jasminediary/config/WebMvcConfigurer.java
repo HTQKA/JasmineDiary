@@ -24,7 +24,8 @@ public class WebMvcConfigurer  extends WebMvcConfigurationSupport {
 
     @Override
     protected void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(getUserInterceptor()).excludePathPatterns("/fyl/user/login","/fyl/user/getVerificationCodePhoto");
+        registry.addInterceptor(getUserInterceptor())
+                .excludePathPatterns("/fyl/user/login","/fyl/user/getVerificationCode","/fyl/user/getVerificationCodePhoto","/fyl/user/getVerificationCodeAndPhoto");
         super.addInterceptors(registry);
     }
 }

@@ -27,7 +27,9 @@ public class MyWebConfigurer implements WebMvcConfigurer {
     public void addInterceptors(InterceptorRegistry registry) {
         //拦截所有路径,除了/index.html
         LoginInterceptor userInterceptor = getLoginInterceptor();
-        registry.addInterceptor(userInterceptor).addPathPatterns("/**").excludePathPatterns("/index.html","fyl/user/getVerificationCodePhoto");
+        registry.addInterceptor(userInterceptor)
+                .addPathPatterns("/**")
+                .excludePathPatterns("/index.html","/fyl/user/getVerificationCode");
     }
 
 }

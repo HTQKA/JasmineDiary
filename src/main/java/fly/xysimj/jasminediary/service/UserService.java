@@ -60,7 +60,10 @@ public class UserService {
             //caffeineCache.put(token,userSession);
             UserCache.add(token, userSession);
             Map<String, UserSession> mapinfo = productToken.productToken(token,userSession);
-            return new Result(200,"登录成功",mapinfo);
+            Map<String, Object> stringObjectMap = new HashMap<>();
+            stringObjectMap.put("token",token);
+            stringObjectMap.put("userInfo",userSession);
+            return new Result(200,"登录成功",stringObjectMap);
             //获取登录token
         } else {
             return new Result(400,"用户名或密码错误");
