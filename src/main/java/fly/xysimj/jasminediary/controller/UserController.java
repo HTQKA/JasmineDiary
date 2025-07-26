@@ -1,6 +1,7 @@
 package fly.xysimj.jasminediary.controller;
 
 import com.google.code.kaptcha.impl.DefaultKaptcha;
+import fly.xysimj.jasminediary.config.annotation.LogPrint;
 import fly.xysimj.jasminediary.entity.Result;
 import fly.xysimj.jasminediary.entity.User;
 import fly.xysimj.jasminediary.entity.VerificationReturn;
@@ -150,9 +151,6 @@ public class UserController {
         return Result.success(verificationReturn);
     }
 
-
-
-
     @ApiOperation("获取验证码")
     @GetMapping("/getVerificationCode")
     public Result getVerificationCode(HttpServletRequest request) {
@@ -164,4 +162,13 @@ public class UserController {
 
     }
 
+
+    @CrossOrigin
+    @PostMapping("/getToken")
+    @ResponseBody
+    @LogPrint
+    public Result getToken(@RequestBody String token) {
+        userService.checkToken(token);
+        return Result.success(token);
+    }
 }

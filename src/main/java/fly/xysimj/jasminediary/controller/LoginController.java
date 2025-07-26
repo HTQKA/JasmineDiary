@@ -5,11 +5,9 @@ import fly.xysimj.jasminediary.entity.Result;
 import fly.xysimj.jasminediary.entity.User;
 import fly.xysimj.jasminediary.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.session.Session;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpSession;
-import java.sql.ResultSet;
 import java.util.Objects;
 
 /**
@@ -48,7 +46,6 @@ public class LoginController {
             return new Result(200,"登录成功");
         }
     }
-
    /**
     * @program: LoginController.java
     * @ClassNmae: LoginController

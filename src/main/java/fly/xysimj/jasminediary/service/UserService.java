@@ -117,4 +117,15 @@ public class UserService {
         return Result.fail("用户不存在");
 
     }
+
+    public String checkToken(String token) {
+        boolean b = UserCache.checkKey(token);
+        if (b) {
+            String tokenNew = UUID.randomUUID().toString().replaceAll("-","");
+            UserCache.add(tokenNew, UserCache.get(token));
+            UserCache.remove(token);
+            return tokenNew;
+        }
+        return token;
+    }
 }
