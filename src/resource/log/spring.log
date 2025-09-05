@@ -1,15 +1,15 @@
-2025-09-04 15:14:08.555  INFO 59199 --- [main] f.x.j.JasmineDiaryApplication            : Starting JasmineDiaryApplication using Java 17.0.12 on undefined.hostname.localhost with PID 59199 (/Users/xysimj/IdeaProjects/JasmineDiary/target/classes started by xysimj in /Users/xysimj/IdeaProjects/JasmineDiary)
-2025-09-04 15:14:08.561  INFO 59199 --- [main] f.x.j.JasmineDiaryApplication            : No active profile set, falling back to default profiles: default
-2025-09-04 15:14:08.605  INFO 59199 --- [main] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2025-09-04 15:14:08.605  INFO 59199 --- [main] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2025-09-04 15:14:09.252  INFO 59199 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2025-09-04 15:14:09.254  INFO 59199 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2025-09-04 15:14:09.283  INFO 59199 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
-2025-09-04 15:14:09.945  INFO 59199 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8989 (http)
-2025-09-04 15:14:09.959  INFO 59199 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-09-04 15:14:09.959  INFO 59199 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
-2025-09-04 15:14:10.007  INFO 59199 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-09-04 15:14:10.007  INFO 59199 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1401 ms
-2025-09-04 15:14:11.120  INFO 59199 --- [main] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2025-09-04 15:14:11.410  INFO 59199 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8989 (http) with context path ''
-2025-09-04 15:14:11.631  INFO 59199 --- [main] f.x.j.JasmineDiaryApplication            : Started JasmineDiaryApplication in 3.533 seconds (JVM running for 4.862)
+2025-09-05 14:16:55.059  INFO 54262 --- [main] f.x.j.JasmineDiaryApplication            : Starting JasmineDiaryApplication using Java 17.0.12 on xysimjdeMacBook-Pro.local with PID 54262 (/Users/xysimj/IdeaProjects/JasmineDiary/target/classes started by xysimj in /Users/xysimj/IdeaProjects/JasmineDiary)
+2025-09-05 14:16:55.063  INFO 54262 --- [main] f.x.j.JasmineDiaryApplication            : No active profile set, falling back to default profiles: default
+2025-09-05 14:16:55.107  INFO 54262 --- [main] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-09-05 14:16:55.108  INFO 54262 --- [main] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-09-05 14:16:55.873  INFO 54262 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2025-09-05 14:16:55.876  INFO 54262 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-09-05 14:16:55.918  INFO 54262 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15 ms. Found 0 Redis repository interfaces.
+2025-09-05 14:16:56.652  INFO 54262 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8989 (http)
+2025-09-05 14:16:56.664  INFO 54262 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-05 14:16:56.664  INFO 54262 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
+2025-09-05 14:16:56.711  INFO 54262 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-09-05 14:16:56.711  INFO 54262 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1603 ms
+2025-09-05 14:16:57.811  INFO 54262 --- [main] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-09-05 14:16:58.104  INFO 54262 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8989 (http) with context path ''
+2025-09-05 14:16:58.342  INFO 54262 --- [main] f.x.j.JasmineDiaryApplication            : Started JasmineDiaryApplication in 3.819 seconds (JVM running for 5.06)
