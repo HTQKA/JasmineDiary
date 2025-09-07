@@ -2,6 +2,7 @@ package fly.xysimj.jasminediary.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
@@ -18,6 +19,7 @@ import java.util.Date;
  **/
 @Data
 @ApiModel(value = "用户实体类", description = "用户实体类")
+@TableName("user")
 public class User extends BaseEntity{
     @ApiModelProperty(value = "用户ID", dataType = "Integer", required = true, example = "1")
     @TableId(type = IdType.ASSIGN_ID)

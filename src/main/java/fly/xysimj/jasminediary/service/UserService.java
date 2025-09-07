@@ -63,10 +63,10 @@ public class UserService {
             Map<String, Object> stringObjectMap = new HashMap<>();
             stringObjectMap.put("token",token);
             stringObjectMap.put("userInfo",userSession);
-            return new Result(200,"登录成功",stringObjectMap);
+            return Result.success(stringObjectMap, "登录成功");
             //获取登录token
         } else {
-            return new Result(400,"用户名或密码错误");
+            return Result.fail("用户名或密码错误");
         }
     }
 

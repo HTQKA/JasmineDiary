@@ -5,7 +5,7 @@ import lombok.Data;
 
 @Data
 @Schema(description = "验证码返回主体")
-public class VerificationReturn {
+public class CaptchaInfo {
     private String code;
     private  byte[] image;
 

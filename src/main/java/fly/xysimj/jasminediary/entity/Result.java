@@ -23,6 +23,7 @@ public class Result implements Serializable {
     private static final long serialVersionUID = 7498483649536881777L;
     private Integer code;
     private String message;
+    private Boolean success;
     private Object data;
 
     public Result(Integer code) {
@@ -46,6 +47,7 @@ public class Result implements Serializable {
         result.setCode(200);
         result.setData(data);
         result.setMessage(message);
+        result.setSuccess(true);
         return result;
     }
 
@@ -61,6 +63,7 @@ public class Result implements Serializable {
         Result result = new Result();
         result.setCode(code);
         result.setData(null);
+        result.setSuccess(Boolean.FALSE);
         result.setMessage(message);
         return result;
     }
@@ -69,12 +72,14 @@ public class Result implements Serializable {
         Result result = new Result();
         result.setCode(code);
         result.setData(data);
+        result.setSuccess(false);
         result.setMessage(message);
         return result;
     }
 
     public static Result fail(String message){
         Result result = new Result();
+        result.setSuccess(Boolean.FALSE);
         result.setMessage(message);
         return result;
     }

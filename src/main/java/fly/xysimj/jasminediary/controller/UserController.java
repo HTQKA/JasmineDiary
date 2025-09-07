@@ -1,6 +1,10 @@
 package fly.xysimj.jasminediary.controller;
 
+import cn.hutool.core.codec.Base64;
+import cn.hutool.core.util.URLUtil;
 import com.google.code.kaptcha.impl.DefaultKaptcha;
+import fly.xysimj.jasminediary.Dto.UserLoginDto;
+import fly.xysimj.jasminediary.entity.CaptchaInfo;
 import fly.xysimj.jasminediary.config.annotation.LogPrint;
 import fly.xysimj.jasminediary.entity.Result;
 import fly.xysimj.jasminediary.entity.User;
@@ -44,7 +48,7 @@ public class UserController {
     private StringRedisTemplate redisTemplate;
 
     @PostMapping("/login")
-    public Result login(@RequestBody User user, HttpSession session, HttpServletRequest request) {
+    public Result login(@RequestBody UserLoginDto user) {
         String username = user.getUsername();
         username = HtmlUtils.htmlEscape(username);
         //User user1 = userService.getUser(username, user.getPassword());
@@ -124,12 +128,15 @@ public class UserController {
         log.info("获取验证码图片");
         byte[] captchaOutputStream = null;
         ByteArrayOutputStream imgOutputStream = new ByteArrayOutputStream();
-        VerificationReturn verificationReturn = new VerificationReturn();
+        CaptchaInfo verificationReturn = new CaptchaInfo();
         try {
             //生成验证码
             String verifyCode = captchaProducer.createText();
             //验证码字符串保存到session中
             httpServletRequest.getSession().setAttribute("verifyCode", verifyCode);
+            //验证码字符串保存到redis中
+            redisTemplate.opsForValue().set("verifyCode", verifyCode);
+
             verificationReturn.setCode(verifyCode);
             BufferedImage challenge = captchaProducer.createImage(verifyCode);
             //设置写出图片的格式
@@ -137,9 +144,12 @@ public class UserController {
         } catch (IllegalArgumentException e) {
             httpServletResponse.sendError(HttpServletResponse.SC_NOT_FOUND);
             return Result.fail(e.getMessage());
+//            return verificationReturn;
         }
         captchaOutputStream = imgOutputStream.toByteArray();
         verificationReturn.setImage(captchaOutputStream);
+        verificationReturn.setCaptchaBase64( URLUtil.getDataUriBase64("image/png",Base64.encode(captchaOutputStream)));
+        verificationReturn.setCaptchaKey("verifyCode");
         // httpServletResponse.setHeader("Cache-Control", "no-store");
         // httpServletResponse.setHeader("Pragma", "no-cache");
         // httpServletResponse.setDateHeader("Expires", 0);
@@ -149,6 +159,7 @@ public class UserController {
         // responseOutputStream.flush();
         // responseOutputStream.close();
         return Result.success(verificationReturn);
+//        return verificationReturn;
     }
 
     @ApiOperation("获取验证码")
