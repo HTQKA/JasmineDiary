@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
  * 部门管理控制器
  */
 @RestController
-@RequestMapping("/api/department")
+@RequestMapping("/fyl/department")
 @Api(tags = "部门管理")
 public class DepartmentController {
 
@@ -75,7 +75,7 @@ public class DepartmentController {
     /**
      * 删除部门
      */
-    @PostMapping("/delete/{id}")
+    @GetMapping("/delete/{id}")
     @ApiOperation("删除部门")
     public Result delete(@PathVariable Long id) {
         try {

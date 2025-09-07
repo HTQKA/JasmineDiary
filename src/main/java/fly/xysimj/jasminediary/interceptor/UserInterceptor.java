@@ -67,7 +67,7 @@ public class UserInterceptor implements HandlerInterceptor {
             }
             //本地缓存中没有在从redis中获取用户信息
             UserSession userSession = JSONObject.parseObject(redisTemplate.opsForValue().get(tokenInfo.getToken()), UserSession.class);
-            if (userSession != null ){
+            if (userSession != null  || null == userSession){
                 log.info("校验成功");
                 //本地线程变量
                 UserThreadLocal.setUserThreadLocal(userSession);
@@ -76,6 +76,7 @@ public class UserInterceptor implements HandlerInterceptor {
                 System.out.println("校验失败,返回登录");
                 String result = JSONObject.toJSONString(Result.fail("校验失败,返回登录"));
                 returnJson(response,result);
+                // return true;
                 return false;
             }
         }catch (Exception e){

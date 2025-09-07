@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
  * 机构管理控制器
  */
 @RestController
-@RequestMapping("/api/organization")
+@RequestMapping("/fyl/organization")
 @Api(tags = "机构管理")
 public class OrganizationController {
 
